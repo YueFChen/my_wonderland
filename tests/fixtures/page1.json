@@ -1,0 +1,329 @@
+{
+  "retcode": 0,
+  "message": "OK",
+  "data": {
+    "stage_list": [
+      {
+        "base_info": {
+          "uid": "100001",
+          "region": "cn_gf01",
+          "stage_id": "1000",
+          "stage_name": "云海漫游 · 1",
+          "cover_url": "",
+          "latest_online_time": 1788000000,
+          "game_list_status": "GAME_LIST_STATUS_ONLINE"
+        },
+        "today_stats": [
+          {
+            "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+            "cur": "8000",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          },
+          {
+            "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+            "cur": "320",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_SECOND",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          },
+          {
+            "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+            "cur": "9800",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          }
+        ]
+      },
+      {
+        "base_info": {
+          "uid": "100001",
+          "region": "cn_gf01",
+          "stage_id": "1001",
+          "stage_name": "星光之旅 · 2",
+          "cover_url": "",
+          "latest_online_time": 1788000001,
+          "game_list_status": "GAME_LIST_STATUS_ONLINE"
+        },
+        "today_stats": [
+          {
+            "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+            "cur": "8100",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          },
+          {
+            "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+            "cur": "320",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_SECOND",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          },
+          {
+            "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+            "cur": "9800",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          }
+        ]
+      },
+      {
+        "base_info": {
+          "uid": "100001",
+          "region": "cn_gf01",
+          "stage_id": "1002",
+          "stage_name": "远山来信 · 3",
+          "cover_url": "",
+          "latest_online_time": 1788000002,
+          "game_list_status": "GAME_LIST_STATUS_ONLINE"
+        },
+        "today_stats": [
+          {
+            "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+            "cur": "8200",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          },
+          {
+            "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+            "cur": "320",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_SECOND",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          },
+          {
+            "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+            "cur": "9800",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          }
+        ]
+      },
+      {
+        "base_info": {
+          "uid": "100001",
+          "region": "cn_gf01",
+          "stage_id": "1003",
+          "stage_name": "云海漫游 · 4",
+          "cover_url": "",
+          "latest_online_time": 1788000003,
+          "game_list_status": "GAME_LIST_STATUS_ONLINE"
+        },
+        "today_stats": [
+          {
+            "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+            "cur": "8300",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          },
+          {
+            "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+            "cur": "320",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_SECOND",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          },
+          {
+            "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+            "cur": "9800",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          }
+        ]
+      },
+      {
+        "base_info": {
+          "uid": "100001",
+          "region": "cn_gf01",
+          "stage_id": "1004",
+          "stage_name": "星光之旅 · 5",
+          "cover_url": "",
+          "latest_online_time": 1788000004,
+          "game_list_status": "GAME_LIST_STATUS_ONLINE"
+        },
+        "today_stats": [
+          {
+            "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+            "cur": "8400",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          },
+          {
+            "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+            "cur": "320",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_SECOND",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          },
+          {
+            "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+            "cur": "9800",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          }
+        ]
+      },
+      {
+        "base_info": {
+          "uid": "100001",
+          "region": "cn_gf01",
+          "stage_id": "1005",
+          "stage_name": "远山来信 · 6",
+          "cover_url": "",
+          "latest_online_time": 1788000005,
+          "game_list_status": "GAME_LIST_STATUS_ONLINE"
+        },
+        "today_stats": [
+          {
+            "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+            "cur": "8500",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          },
+          {
+            "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+            "cur": "320",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_SECOND",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          },
+          {
+            "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+            "cur": "9800",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          }
+        ]
+      },
+      {
+        "base_info": {
+          "uid": "100001",
+          "region": "cn_gf01",
+          "stage_id": "1006",
+          "stage_name": "云海漫游 · 7",
+          "cover_url": "",
+          "latest_online_time": 1788000006,
+          "game_list_status": "GAME_LIST_STATUS_ONLINE"
+        },
+        "today_stats": [
+          {
+            "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+            "cur": "8600",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          },
+          {
+            "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+            "cur": "320",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_SECOND",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          },
+          {
+            "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+            "cur": "9800",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          }
+        ]
+      },
+      {
+        "base_info": {
+          "uid": "100001",
+          "region": "cn_gf01",
+          "stage_id": "1007",
+          "stage_name": "星光之旅 · 8",
+          "cover_url": "",
+          "latest_online_time": 1788000007,
+          "game_list_status": "GAME_LIST_STATUS_ONLINE"
+        },
+        "today_stats": [
+          {
+            "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+            "cur": "8700",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          },
+          {
+            "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+            "cur": "320",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_SECOND",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          },
+          {
+            "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+            "cur": "9800",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          }
+        ]
+      }
+    ],
+    "total": 9
+  }
+}

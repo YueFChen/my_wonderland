@@ -1,0 +1,49 @@
+{
+  "retcode": 0,
+  "message": "OK",
+  "data": {
+    "stage_list": [
+      {
+        "base_info": {
+          "uid": "100001",
+          "region": "cn_gf01",
+          "stage_id": "1008",
+          "stage_name": "远山来信 · 9",
+          "cover_url": "",
+          "latest_online_time": 1788000008,
+          "game_list_status": "GAME_LIST_STATUS_ONLINE"
+        },
+        "today_stats": [
+          {
+            "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+            "cur": "8800",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          },
+          {
+            "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+            "cur": "320",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_SECOND",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          },
+          {
+            "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+            "cur": "9800",
+            "cur_invalid": false,
+            "delta": "10",
+            "delta_invalid": false,
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+          }
+        ]
+      }
+    ],
+    "total": 9
+  }
+}

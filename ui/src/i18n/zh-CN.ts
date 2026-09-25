@@ -1,0 +1,99 @@
+/**
+ * 插件界面文案资源表。
+ *
+ * 键 = `<域>.<语义>`，点分、段内 camelCase；域取页面 / 视图名：
+ * `works`（作品列表页）、`detail`（作品详情）、`stats`（指标与时长分布）、
+ * `chart`（趋势图）、`common`（跨视图复用）、`metric`（数值单位）。
+ * 官方指标代号 → 显示名的映射见 `metric.ts`。
+ *
+ * 带参数的条目用 `{name}` 占位符，调用处传 `t(key, { name })`。
+ */
+export const zh = {
+  /** 作品列表页（index.tsx / WorksView.tsx）。 */
+  'works.title': '我的奇域',
+  'works.loading': '正在读取本地数据…',
+  'works.emptyLocal': '暂无本地数据，正在从官方获取…',
+  'works.empty': '该角色暂无作品。',
+  'works.emptyOnline': '暂无在线作品。',
+  'works.emptyOffline': '暂无离线作品。',
+  'works.emptyDeleted': '暂无已删除作品。',
+  'works.noAccount': '请先在账号页登录并同步角色。',
+  'works.account': '账号 / 角色',
+  'works.updatedAt': '数据更新于',
+  'works.updating': '正在更新…',
+  'works.collecting': '正在采集总览、作品与详情…',
+  /** 作品状态筛选。 */
+  'works.filterAria': '作品状态筛选',
+  'works.filterAll': '全部',
+  'works.filterOnline': '在线',
+  'works.filterOffline': '离线',
+  'works.filterDeleted': '已删除',
+  'works.totalStages': '总关卡数',
+  'works.onlineStages': '在线关卡',
+  'works.totalHot': '总热度',
+  'works.avgRate': '平均好评率',
+  'works.back': '返回作品列表',
+  'works.viewDetail': '查看详情',
+  'works.stageId': '关卡ID',
+  'works.hotScore': '热度',
+  'works.goodRate': '好评率',
+  'works.avgTime': '平均时长',
+  /** 官方只给滚动窗口，本地按日期去重后长期留存。 */
+  'works.archivePolicy': '数据按日期去重后留存于本机，官方窗口之外的历史仍可查看。',
+  'works.partial': '自动抓取失败不会影响已有数据；下次进入页面会重试。',
+  'works.invalid': '— 表示官方未提供有效数据，不按 0 计算。',
+  'works.previous': '上一页',
+  'works.next': '下一页',
+
+  /** 作品详情（DetailView.tsx）。 */
+  'detail.latestOnline': '最近上线',
+  'detail.metricGroup': '指标分组',
+  'detail.allGroups': '全部指标',
+  'detail.comments': '作品评价',
+  'detail.commentsHint': '展示统计接口返回的评价样本。',
+  'detail.recommend': '推荐',
+  'detail.notRecommend': '不推荐',
+  'detail.noComments': '暂无评价样本',
+
+  /** 指标卡片与时长分布（Stats.tsx / Charts.tsx 分布图）。 */
+  'stats.changedVsYesterday': '较昨日',
+  'stats.distributionTitle': '游玩时长分布',
+  'stats.distributionAria': '时长分布区间',
+  'stats.distributionDetail': '查看分布明细',
+  'stats.distributionRecommended': '推荐',
+  /** 时长分布区间名，参数为区间序号。 */
+  'stats.distributionRange': '区间 {index}',
+  'stats.minutesAbove': '{min} 分钟以上',
+  'stats.minutesRange': '{min}–{max} 分钟',
+
+  /** 趋势图（Charts.tsx）。 */
+  'chart.title': '趋势分析',
+  'chart.range7': '近 7 天',
+  'chart.range30': '近 30 天',
+  'chart.rangeAll': '全部历史',
+  'chart.noTrend': '此指标暂无趋势数据',
+  'chart.noData': '暂无趋势数据',
+  'chart.delta7': '7 日变化',
+  'chart.delta30': '30 日变化',
+  /** 图表无障碍描述，参数为指标名。 */
+  'chart.aria': '{metric}趋势图，详细数值可在下方展开',
+  'chart.details': '查看数据明细',
+  /** 数据明细表列头（趋势表与分布表共用）。 */
+  'chart.pointsDate': '日期',
+  'chart.pointsValue': '数值',
+  'chart.pointsRange': '时长区间',
+  'chart.pointsPercent': '占比',
+  'chart.pointsCount': '次数',
+
+  /** 跨视图复用。 */
+  'common.worksUnit': '{count} 个作品',
+  'common.statusOnline': '已上线',
+  'common.statusOffline': '已下线',
+  'common.statusDeleted': '已删除',
+  'common.unknown': '未知状态',
+  'common.failed': '操作失败',
+
+  /** 数值单位（metrics.ts）。 */
+  'metric.hours': '{hours}小时',
+  'metric.duration': '{minutes}分 {seconds}秒',
+} as const

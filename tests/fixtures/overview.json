@@ -1,0 +1,507 @@
+{
+  "retcode": 0,
+  "message": "OK",
+  "data": {
+    "today_str": "2026-08-30",
+    "today_stats": [
+      {
+        "metric_type": "METRIC_USER_TYPE_STAGE_HOT_SCORE_TOTAL",
+        "cur": "28000",
+        "cur_invalid": false,
+        "delta": "10",
+        "delta_invalid": false,
+        "value_type": "METRIC_VALUE_TYPE_NORMAL",
+        "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+      },
+      {
+        "metric_type": "METRIC_USER_TYPE_STAGE_TOTAL_HOT_RANK",
+        "cur": "125",
+        "cur_invalid": false,
+        "delta": "10",
+        "delta_invalid": false,
+        "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+        "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+      },
+      {
+        "metric_type": "METRIC_USER_TYPE_AVG_STAGE_GOOD_RATE",
+        "cur": "9650",
+        "cur_invalid": false,
+        "delta": "10",
+        "delta_invalid": false,
+        "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+        "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+      },
+      {
+        "metric_type": "METRIC_USER_TYPE_PLAY_SCALE_CUMULATIVE",
+        "cur": "320450",
+        "cur_invalid": false,
+        "delta": "10",
+        "delta_invalid": false,
+        "value_type": "METRIC_VALUE_TYPE_SCORE",
+        "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+      },
+      {
+        "metric_type": "METRIC_USER_TYPE_STAGE_TOTAL",
+        "cur": "9",
+        "cur_invalid": false,
+        "delta": "10",
+        "delta_invalid": false,
+        "value_type": "METRIC_VALUE_TYPE_NORMAL",
+        "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+      }
+    ],
+    "trend_data": [
+      {
+        "metric_type": "METRIC_USER_TYPE_STAGE_HOT_SCORE_TOTAL",
+        "delta_7_day": "70",
+        "delta_7_day_invalid": false,
+        "delta_30_day": "300",
+        "delta_30_day_invalid": false,
+        "daily_info": [],
+        "daily_stats": [
+          {
+            "date": "2026-08-01",
+            "cur": "100",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-02",
+            "cur": "124",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-03",
+            "cur": "132",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-04",
+            "cur": "124",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-05",
+            "cur": "113",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-06",
+            "cur": "116",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": true
+          },
+          {
+            "date": "2026-08-07",
+            "cur": "136",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-08",
+            "cur": "162",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-09",
+            "cur": "176",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-10",
+            "cur": "171",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-11",
+            "cur": "159",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-12",
+            "cur": "157",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-13",
+            "cur": "173",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-14",
+            "cur": "199",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-15",
+            "cur": "218",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-16",
+            "cur": "218",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-17",
+            "cur": "206",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-18",
+            "cur": "200",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-19",
+            "cur": "211",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-20",
+            "cur": "236",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-21",
+            "cur": "258",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-22",
+            "cur": "264",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-23",
+            "cur": "254",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-24",
+            "cur": "244",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-25",
+            "cur": "250",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-26",
+            "cur": "272",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-27",
+            "cur": "297",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-28",
+            "cur": "308",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-29",
+            "cur": "301",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-30",
+            "cur": "290",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          }
+        ],
+        "value_type": "METRIC_VALUE_TYPE_NORMAL",
+        "calculate_type": "METRIC_CALCULATE_TYPE_ROUND",
+        "normalized_info_7d": [],
+        "normalized_stats_7d": [],
+        "multi_group_dist": null
+      },
+      {
+        "metric_type": "METRIC_USER_TYPE_AVG_STAGE_GOOD_RATE",
+        "delta_7_day": "70",
+        "delta_7_day_invalid": false,
+        "delta_30_day": "300",
+        "delta_30_day_invalid": false,
+        "daily_info": [],
+        "daily_stats": [
+          {
+            "date": "2026-08-01",
+            "cur": "100",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-02",
+            "cur": "124",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-03",
+            "cur": "132",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-04",
+            "cur": "124",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-05",
+            "cur": "113",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-06",
+            "cur": "116",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": true
+          },
+          {
+            "date": "2026-08-07",
+            "cur": "136",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-08",
+            "cur": "162",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-09",
+            "cur": "176",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-10",
+            "cur": "171",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-11",
+            "cur": "159",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-12",
+            "cur": "157",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-13",
+            "cur": "173",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-14",
+            "cur": "199",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-15",
+            "cur": "218",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-16",
+            "cur": "218",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-17",
+            "cur": "206",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-18",
+            "cur": "200",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-19",
+            "cur": "211",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-20",
+            "cur": "236",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-21",
+            "cur": "258",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-22",
+            "cur": "264",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-23",
+            "cur": "254",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-24",
+            "cur": "244",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-25",
+            "cur": "250",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-26",
+            "cur": "272",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-27",
+            "cur": "297",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-28",
+            "cur": "308",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-29",
+            "cur": "301",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-30",
+            "cur": "290",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          }
+        ],
+        "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+        "calculate_type": "METRIC_CALCULATE_TYPE_ROUND",
+        "normalized_info_7d": [],
+        "normalized_stats_7d": [],
+        "multi_group_dist": null
+      }
+    ],
+    "subscribe_gear_config": []
+  }
+}

@@ -1,0 +1,5503 @@
+{
+  "schema_version": 1,
+  "scope": {
+    "account_key": "demo",
+    "uid": "100001",
+    "region": "cn_gf01"
+  },
+  "snapshot_id": "1788000000000",
+  "fetched_at": 1788000000,
+  "overview": {
+    "today_str": "2026-08-30",
+    "today_stats": [
+      {
+        "metric_type": "METRIC_USER_TYPE_STAGE_HOT_SCORE_TOTAL",
+        "cur": "28000",
+        "cur_invalid": false,
+        "delta": "10",
+        "delta_invalid": false,
+        "value_type": "METRIC_VALUE_TYPE_NORMAL",
+        "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+      },
+      {
+        "metric_type": "METRIC_USER_TYPE_STAGE_TOTAL_HOT_RANK",
+        "cur": "125",
+        "cur_invalid": false,
+        "delta": "10",
+        "delta_invalid": false,
+        "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+        "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+      },
+      {
+        "metric_type": "METRIC_USER_TYPE_AVG_STAGE_GOOD_RATE",
+        "cur": "9650",
+        "cur_invalid": false,
+        "delta": "10",
+        "delta_invalid": false,
+        "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+        "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+      },
+      {
+        "metric_type": "METRIC_USER_TYPE_PLAY_SCALE_CUMULATIVE",
+        "cur": "320450",
+        "cur_invalid": false,
+        "delta": "10",
+        "delta_invalid": false,
+        "value_type": "METRIC_VALUE_TYPE_SCORE",
+        "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+      },
+      {
+        "metric_type": "METRIC_USER_TYPE_STAGE_TOTAL",
+        "cur": "9",
+        "cur_invalid": false,
+        "delta": "10",
+        "delta_invalid": false,
+        "value_type": "METRIC_VALUE_TYPE_NORMAL",
+        "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+      }
+    ],
+    "trend_data": [
+      {
+        "metric_type": "METRIC_USER_TYPE_STAGE_HOT_SCORE_TOTAL",
+        "delta_7_day": "70",
+        "delta_7_day_invalid": false,
+        "delta_30_day": "300",
+        "delta_30_day_invalid": false,
+        "daily_info": [],
+        "daily_stats": [
+          {
+            "date": "2026-08-01",
+            "cur": "100",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-02",
+            "cur": "124",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-03",
+            "cur": "132",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-04",
+            "cur": "124",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-05",
+            "cur": "113",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-06",
+            "cur": "116",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": true
+          },
+          {
+            "date": "2026-08-07",
+            "cur": "136",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-08",
+            "cur": "162",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-09",
+            "cur": "176",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-10",
+            "cur": "171",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-11",
+            "cur": "159",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-12",
+            "cur": "157",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-13",
+            "cur": "173",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-14",
+            "cur": "199",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-15",
+            "cur": "218",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-16",
+            "cur": "218",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-17",
+            "cur": "206",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-18",
+            "cur": "200",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-19",
+            "cur": "211",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-20",
+            "cur": "236",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-21",
+            "cur": "258",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-22",
+            "cur": "264",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-23",
+            "cur": "254",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-24",
+            "cur": "244",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-25",
+            "cur": "250",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-26",
+            "cur": "272",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-27",
+            "cur": "297",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-28",
+            "cur": "308",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-29",
+            "cur": "301",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-30",
+            "cur": "290",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_NORMAL",
+            "cur_invalid": false
+          }
+        ],
+        "value_type": "METRIC_VALUE_TYPE_NORMAL",
+        "calculate_type": "METRIC_CALCULATE_TYPE_ROUND",
+        "normalized_info_7d": [],
+        "normalized_stats_7d": [],
+        "multi_group_dist": null
+      },
+      {
+        "metric_type": "METRIC_USER_TYPE_AVG_STAGE_GOOD_RATE",
+        "delta_7_day": "70",
+        "delta_7_day_invalid": false,
+        "delta_30_day": "300",
+        "delta_30_day_invalid": false,
+        "daily_info": [],
+        "daily_stats": [
+          {
+            "date": "2026-08-01",
+            "cur": "100",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-02",
+            "cur": "124",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-03",
+            "cur": "132",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-04",
+            "cur": "124",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-05",
+            "cur": "113",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-06",
+            "cur": "116",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": true
+          },
+          {
+            "date": "2026-08-07",
+            "cur": "136",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-08",
+            "cur": "162",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-09",
+            "cur": "176",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-10",
+            "cur": "171",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-11",
+            "cur": "159",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-12",
+            "cur": "157",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-13",
+            "cur": "173",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-14",
+            "cur": "199",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-15",
+            "cur": "218",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-16",
+            "cur": "218",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-17",
+            "cur": "206",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-18",
+            "cur": "200",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-19",
+            "cur": "211",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-20",
+            "cur": "236",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-21",
+            "cur": "258",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-22",
+            "cur": "264",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-23",
+            "cur": "254",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-24",
+            "cur": "244",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-25",
+            "cur": "250",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-26",
+            "cur": "272",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-27",
+            "cur": "297",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-28",
+            "cur": "308",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-29",
+            "cur": "301",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          },
+          {
+            "date": "2026-08-30",
+            "cur": "290",
+            "delta": "7",
+            "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+            "cur_invalid": false
+          }
+        ],
+        "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+        "calculate_type": "METRIC_CALCULATE_TYPE_ROUND",
+        "normalized_info_7d": [],
+        "normalized_stats_7d": [],
+        "multi_group_dist": null
+      }
+    ],
+    "subscribe_gear_config": []
+  },
+  "stages": [
+    {
+      "base_info": {
+        "uid": "100001",
+        "region": "cn_gf01",
+        "stage_id": "1000",
+        "stage_name": "云海漫游 · 1",
+        "cover_url": "",
+        "latest_online_time": 1788000000,
+        "game_list_status": "GAME_LIST_STATUS_ONLINE"
+      },
+      "today_stats": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "cur": "8000",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "cur": "320",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+          "cur": "9800",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        }
+      ]
+    },
+    {
+      "base_info": {
+        "uid": "100001",
+        "region": "cn_gf01",
+        "stage_id": "1001",
+        "stage_name": "星光之旅 · 2",
+        "cover_url": "",
+        "latest_online_time": 1788000001,
+        "game_list_status": "GAME_LIST_STATUS_ONLINE"
+      },
+      "today_stats": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "cur": "8100",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "cur": "320",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+          "cur": "9800",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        }
+      ]
+    },
+    {
+      "base_info": {
+        "uid": "100001",
+        "region": "cn_gf01",
+        "stage_id": "1002",
+        "stage_name": "远山来信 · 3",
+        "cover_url": "",
+        "latest_online_time": 1788000002,
+        "game_list_status": "GAME_LIST_STATUS_ONLINE"
+      },
+      "today_stats": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "cur": "8200",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "cur": "320",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+          "cur": "9800",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        }
+      ]
+    },
+    {
+      "base_info": {
+        "uid": "100001",
+        "region": "cn_gf01",
+        "stage_id": "1003",
+        "stage_name": "云海漫游 · 4",
+        "cover_url": "",
+        "latest_online_time": 1788000003,
+        "game_list_status": "GAME_LIST_STATUS_ONLINE"
+      },
+      "today_stats": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "cur": "8300",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "cur": "320",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+          "cur": "9800",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        }
+      ]
+    },
+    {
+      "base_info": {
+        "uid": "100001",
+        "region": "cn_gf01",
+        "stage_id": "1004",
+        "stage_name": "星光之旅 · 5",
+        "cover_url": "",
+        "latest_online_time": 1788000004,
+        "game_list_status": "GAME_LIST_STATUS_ONLINE"
+      },
+      "today_stats": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "cur": "8400",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "cur": "320",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+          "cur": "9800",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        }
+      ]
+    },
+    {
+      "base_info": {
+        "uid": "100001",
+        "region": "cn_gf01",
+        "stage_id": "1005",
+        "stage_name": "远山来信 · 6",
+        "cover_url": "",
+        "latest_online_time": 1788000005,
+        "game_list_status": "GAME_LIST_STATUS_ONLINE"
+      },
+      "today_stats": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "cur": "8500",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "cur": "320",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+          "cur": "9800",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        }
+      ]
+    },
+    {
+      "base_info": {
+        "uid": "100001",
+        "region": "cn_gf01",
+        "stage_id": "1006",
+        "stage_name": "云海漫游 · 7",
+        "cover_url": "",
+        "latest_online_time": 1788000006,
+        "game_list_status": "GAME_LIST_STATUS_ONLINE"
+      },
+      "today_stats": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "cur": "8600",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "cur": "320",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+          "cur": "9800",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        }
+      ]
+    },
+    {
+      "base_info": {
+        "uid": "100001",
+        "region": "cn_gf01",
+        "stage_id": "1007",
+        "stage_name": "星光之旅 · 8",
+        "cover_url": "",
+        "latest_online_time": 1788000007,
+        "game_list_status": "GAME_LIST_STATUS_ONLINE"
+      },
+      "today_stats": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "cur": "8700",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "cur": "320",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+          "cur": "9800",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        }
+      ]
+    },
+    {
+      "base_info": {
+        "uid": "100001",
+        "region": "cn_gf01",
+        "stage_id": "1008",
+        "stage_name": "远山来信 · 9",
+        "cover_url": "",
+        "latest_online_time": 1788000008,
+        "game_list_status": "GAME_LIST_STATUS_ONLINE"
+      },
+      "today_stats": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "cur": "8800",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "cur": "320",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+          "cur": "9800",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        }
+      ]
+    }
+  ],
+  "details": {
+    "1000": {
+      "today_str": "2026-08-30",
+      "stage_info": {
+        "uid": "100001",
+        "region": "cn_gf01",
+        "stage_id": "1000",
+        "stage_name": "云海漫游 · 1",
+        "cover_url": "",
+        "latest_online_time": 1788000000,
+        "game_list_status": "GAME_LIST_STATUS_ONLINE"
+      },
+      "today_stats": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "cur": "8000",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "cur": "320",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+          "cur": "9800",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        }
+      ],
+      "trend_data": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "delta_7_day": "70",
+          "delta_7_day_invalid": false,
+          "delta_30_day": "300",
+          "delta_30_day_invalid": false,
+          "daily_info": [],
+          "daily_stats": [
+            {
+              "date": "2026-08-01",
+              "cur": "100",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-02",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-03",
+              "cur": "132",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-04",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-05",
+              "cur": "113",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-06",
+              "cur": "116",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": true
+            },
+            {
+              "date": "2026-08-07",
+              "cur": "136",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-08",
+              "cur": "162",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-09",
+              "cur": "176",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-10",
+              "cur": "171",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-11",
+              "cur": "159",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-12",
+              "cur": "157",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-13",
+              "cur": "173",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-14",
+              "cur": "199",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-15",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-16",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-17",
+              "cur": "206",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-18",
+              "cur": "200",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-19",
+              "cur": "211",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-20",
+              "cur": "236",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-21",
+              "cur": "258",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-22",
+              "cur": "264",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-23",
+              "cur": "254",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-24",
+              "cur": "244",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-25",
+              "cur": "250",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-26",
+              "cur": "272",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-27",
+              "cur": "297",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-28",
+              "cur": "308",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-29",
+              "cur": "301",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-30",
+              "cur": "290",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            }
+          ],
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND",
+          "normalized_info_7d": [],
+          "normalized_stats_7d": [],
+          "multi_group_dist": null
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "delta_7_day": "70",
+          "delta_7_day_invalid": false,
+          "delta_30_day": "300",
+          "delta_30_day_invalid": false,
+          "daily_info": [],
+          "daily_stats": [
+            {
+              "date": "2026-08-01",
+              "cur": "100",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-02",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-03",
+              "cur": "132",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-04",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-05",
+              "cur": "113",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-06",
+              "cur": "116",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": true
+            },
+            {
+              "date": "2026-08-07",
+              "cur": "136",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-08",
+              "cur": "162",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-09",
+              "cur": "176",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-10",
+              "cur": "171",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-11",
+              "cur": "159",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-12",
+              "cur": "157",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-13",
+              "cur": "173",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-14",
+              "cur": "199",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-15",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-16",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-17",
+              "cur": "206",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-18",
+              "cur": "200",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-19",
+              "cur": "211",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-20",
+              "cur": "236",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-21",
+              "cur": "258",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-22",
+              "cur": "264",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-23",
+              "cur": "254",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-24",
+              "cur": "244",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-25",
+              "cur": "250",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-26",
+              "cur": "272",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-27",
+              "cur": "297",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-28",
+              "cur": "308",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-29",
+              "cur": "301",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-30",
+              "cur": "290",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            }
+          ],
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND",
+          "normalized_info_7d": [],
+          "normalized_stats_7d": [],
+          "multi_group_dist": null
+        }
+      ],
+      "metric_groups": [
+        {
+          "group_type": "STAGE_METRIC_GROUP_TYPE_PLAY",
+          "metric_types": [
+            "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+            "METRIC_STAGE_TYPE_AVG_TIME"
+          ]
+        }
+      ],
+      "comment_module_info": {
+        "total_comment_num": "1",
+        "comment_list": [
+          {
+            "comment_id": "sample-comment",
+            "nickname": "示例玩家",
+            "content": "这里是脱敏后的示例评价。",
+            "is_recommend": true,
+            "comment_unix": 1788000000
+          }
+        ]
+      }
+    },
+    "1001": {
+      "today_str": "2026-08-30",
+      "stage_info": {
+        "uid": "100001",
+        "region": "cn_gf01",
+        "stage_id": "1001",
+        "stage_name": "星光之旅 · 2",
+        "cover_url": "",
+        "latest_online_time": 1788000001,
+        "game_list_status": "GAME_LIST_STATUS_ONLINE"
+      },
+      "today_stats": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "cur": "8000",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "cur": "320",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+          "cur": "9800",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        }
+      ],
+      "trend_data": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "delta_7_day": "70",
+          "delta_7_day_invalid": false,
+          "delta_30_day": "300",
+          "delta_30_day_invalid": false,
+          "daily_info": [],
+          "daily_stats": [
+            {
+              "date": "2026-08-01",
+              "cur": "100",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-02",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-03",
+              "cur": "132",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-04",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-05",
+              "cur": "113",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-06",
+              "cur": "116",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": true
+            },
+            {
+              "date": "2026-08-07",
+              "cur": "136",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-08",
+              "cur": "162",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-09",
+              "cur": "176",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-10",
+              "cur": "171",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-11",
+              "cur": "159",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-12",
+              "cur": "157",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-13",
+              "cur": "173",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-14",
+              "cur": "199",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-15",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-16",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-17",
+              "cur": "206",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-18",
+              "cur": "200",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-19",
+              "cur": "211",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-20",
+              "cur": "236",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-21",
+              "cur": "258",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-22",
+              "cur": "264",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-23",
+              "cur": "254",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-24",
+              "cur": "244",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-25",
+              "cur": "250",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-26",
+              "cur": "272",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-27",
+              "cur": "297",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-28",
+              "cur": "308",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-29",
+              "cur": "301",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-30",
+              "cur": "290",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            }
+          ],
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND",
+          "normalized_info_7d": [],
+          "normalized_stats_7d": [],
+          "multi_group_dist": null
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "delta_7_day": "70",
+          "delta_7_day_invalid": false,
+          "delta_30_day": "300",
+          "delta_30_day_invalid": false,
+          "daily_info": [],
+          "daily_stats": [
+            {
+              "date": "2026-08-01",
+              "cur": "100",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-02",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-03",
+              "cur": "132",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-04",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-05",
+              "cur": "113",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-06",
+              "cur": "116",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": true
+            },
+            {
+              "date": "2026-08-07",
+              "cur": "136",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-08",
+              "cur": "162",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-09",
+              "cur": "176",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-10",
+              "cur": "171",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-11",
+              "cur": "159",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-12",
+              "cur": "157",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-13",
+              "cur": "173",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-14",
+              "cur": "199",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-15",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-16",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-17",
+              "cur": "206",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-18",
+              "cur": "200",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-19",
+              "cur": "211",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-20",
+              "cur": "236",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-21",
+              "cur": "258",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-22",
+              "cur": "264",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-23",
+              "cur": "254",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-24",
+              "cur": "244",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-25",
+              "cur": "250",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-26",
+              "cur": "272",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-27",
+              "cur": "297",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-28",
+              "cur": "308",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-29",
+              "cur": "301",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-30",
+              "cur": "290",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            }
+          ],
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND",
+          "normalized_info_7d": [],
+          "normalized_stats_7d": [],
+          "multi_group_dist": null
+        }
+      ],
+      "metric_groups": [
+        {
+          "group_type": "STAGE_METRIC_GROUP_TYPE_PLAY",
+          "metric_types": [
+            "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+            "METRIC_STAGE_TYPE_AVG_TIME"
+          ]
+        }
+      ],
+      "comment_module_info": {
+        "total_comment_num": "1",
+        "comment_list": [
+          {
+            "comment_id": "sample-comment",
+            "nickname": "示例玩家",
+            "content": "这里是脱敏后的示例评价。",
+            "is_recommend": true,
+            "comment_unix": 1788000000
+          }
+        ]
+      }
+    },
+    "1002": {
+      "today_str": "2026-08-30",
+      "stage_info": {
+        "uid": "100001",
+        "region": "cn_gf01",
+        "stage_id": "1002",
+        "stage_name": "远山来信 · 3",
+        "cover_url": "",
+        "latest_online_time": 1788000002,
+        "game_list_status": "GAME_LIST_STATUS_ONLINE"
+      },
+      "today_stats": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "cur": "8000",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "cur": "320",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+          "cur": "9800",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        }
+      ],
+      "trend_data": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "delta_7_day": "70",
+          "delta_7_day_invalid": false,
+          "delta_30_day": "300",
+          "delta_30_day_invalid": false,
+          "daily_info": [],
+          "daily_stats": [
+            {
+              "date": "2026-08-01",
+              "cur": "100",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-02",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-03",
+              "cur": "132",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-04",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-05",
+              "cur": "113",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-06",
+              "cur": "116",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": true
+            },
+            {
+              "date": "2026-08-07",
+              "cur": "136",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-08",
+              "cur": "162",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-09",
+              "cur": "176",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-10",
+              "cur": "171",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-11",
+              "cur": "159",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-12",
+              "cur": "157",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-13",
+              "cur": "173",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-14",
+              "cur": "199",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-15",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-16",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-17",
+              "cur": "206",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-18",
+              "cur": "200",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-19",
+              "cur": "211",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-20",
+              "cur": "236",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-21",
+              "cur": "258",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-22",
+              "cur": "264",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-23",
+              "cur": "254",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-24",
+              "cur": "244",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-25",
+              "cur": "250",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-26",
+              "cur": "272",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-27",
+              "cur": "297",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-28",
+              "cur": "308",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-29",
+              "cur": "301",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-30",
+              "cur": "290",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            }
+          ],
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND",
+          "normalized_info_7d": [],
+          "normalized_stats_7d": [],
+          "multi_group_dist": null
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "delta_7_day": "70",
+          "delta_7_day_invalid": false,
+          "delta_30_day": "300",
+          "delta_30_day_invalid": false,
+          "daily_info": [],
+          "daily_stats": [
+            {
+              "date": "2026-08-01",
+              "cur": "100",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-02",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-03",
+              "cur": "132",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-04",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-05",
+              "cur": "113",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-06",
+              "cur": "116",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": true
+            },
+            {
+              "date": "2026-08-07",
+              "cur": "136",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-08",
+              "cur": "162",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-09",
+              "cur": "176",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-10",
+              "cur": "171",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-11",
+              "cur": "159",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-12",
+              "cur": "157",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-13",
+              "cur": "173",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-14",
+              "cur": "199",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-15",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-16",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-17",
+              "cur": "206",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-18",
+              "cur": "200",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-19",
+              "cur": "211",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-20",
+              "cur": "236",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-21",
+              "cur": "258",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-22",
+              "cur": "264",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-23",
+              "cur": "254",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-24",
+              "cur": "244",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-25",
+              "cur": "250",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-26",
+              "cur": "272",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-27",
+              "cur": "297",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-28",
+              "cur": "308",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-29",
+              "cur": "301",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-30",
+              "cur": "290",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            }
+          ],
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND",
+          "normalized_info_7d": [],
+          "normalized_stats_7d": [],
+          "multi_group_dist": null
+        }
+      ],
+      "metric_groups": [
+        {
+          "group_type": "STAGE_METRIC_GROUP_TYPE_PLAY",
+          "metric_types": [
+            "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+            "METRIC_STAGE_TYPE_AVG_TIME"
+          ]
+        }
+      ],
+      "comment_module_info": {
+        "total_comment_num": "1",
+        "comment_list": [
+          {
+            "comment_id": "sample-comment",
+            "nickname": "示例玩家",
+            "content": "这里是脱敏后的示例评价。",
+            "is_recommend": true,
+            "comment_unix": 1788000000
+          }
+        ]
+      }
+    },
+    "1003": {
+      "today_str": "2026-08-30",
+      "stage_info": {
+        "uid": "100001",
+        "region": "cn_gf01",
+        "stage_id": "1003",
+        "stage_name": "云海漫游 · 4",
+        "cover_url": "",
+        "latest_online_time": 1788000003,
+        "game_list_status": "GAME_LIST_STATUS_ONLINE"
+      },
+      "today_stats": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "cur": "8000",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "cur": "320",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+          "cur": "9800",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        }
+      ],
+      "trend_data": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "delta_7_day": "70",
+          "delta_7_day_invalid": false,
+          "delta_30_day": "300",
+          "delta_30_day_invalid": false,
+          "daily_info": [],
+          "daily_stats": [
+            {
+              "date": "2026-08-01",
+              "cur": "100",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-02",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-03",
+              "cur": "132",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-04",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-05",
+              "cur": "113",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-06",
+              "cur": "116",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": true
+            },
+            {
+              "date": "2026-08-07",
+              "cur": "136",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-08",
+              "cur": "162",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-09",
+              "cur": "176",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-10",
+              "cur": "171",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-11",
+              "cur": "159",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-12",
+              "cur": "157",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-13",
+              "cur": "173",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-14",
+              "cur": "199",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-15",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-16",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-17",
+              "cur": "206",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-18",
+              "cur": "200",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-19",
+              "cur": "211",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-20",
+              "cur": "236",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-21",
+              "cur": "258",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-22",
+              "cur": "264",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-23",
+              "cur": "254",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-24",
+              "cur": "244",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-25",
+              "cur": "250",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-26",
+              "cur": "272",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-27",
+              "cur": "297",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-28",
+              "cur": "308",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-29",
+              "cur": "301",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-30",
+              "cur": "290",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            }
+          ],
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND",
+          "normalized_info_7d": [],
+          "normalized_stats_7d": [],
+          "multi_group_dist": null
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "delta_7_day": "70",
+          "delta_7_day_invalid": false,
+          "delta_30_day": "300",
+          "delta_30_day_invalid": false,
+          "daily_info": [],
+          "daily_stats": [
+            {
+              "date": "2026-08-01",
+              "cur": "100",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-02",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-03",
+              "cur": "132",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-04",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-05",
+              "cur": "113",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-06",
+              "cur": "116",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": true
+            },
+            {
+              "date": "2026-08-07",
+              "cur": "136",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-08",
+              "cur": "162",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-09",
+              "cur": "176",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-10",
+              "cur": "171",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-11",
+              "cur": "159",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-12",
+              "cur": "157",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-13",
+              "cur": "173",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-14",
+              "cur": "199",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-15",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-16",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-17",
+              "cur": "206",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-18",
+              "cur": "200",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-19",
+              "cur": "211",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-20",
+              "cur": "236",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-21",
+              "cur": "258",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-22",
+              "cur": "264",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-23",
+              "cur": "254",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-24",
+              "cur": "244",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-25",
+              "cur": "250",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-26",
+              "cur": "272",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-27",
+              "cur": "297",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-28",
+              "cur": "308",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-29",
+              "cur": "301",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-30",
+              "cur": "290",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            }
+          ],
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND",
+          "normalized_info_7d": [],
+          "normalized_stats_7d": [],
+          "multi_group_dist": null
+        }
+      ],
+      "metric_groups": [
+        {
+          "group_type": "STAGE_METRIC_GROUP_TYPE_PLAY",
+          "metric_types": [
+            "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+            "METRIC_STAGE_TYPE_AVG_TIME"
+          ]
+        }
+      ],
+      "comment_module_info": {
+        "total_comment_num": "1",
+        "comment_list": [
+          {
+            "comment_id": "sample-comment",
+            "nickname": "示例玩家",
+            "content": "这里是脱敏后的示例评价。",
+            "is_recommend": true,
+            "comment_unix": 1788000000
+          }
+        ]
+      }
+    },
+    "1004": {
+      "today_str": "2026-08-30",
+      "stage_info": {
+        "uid": "100001",
+        "region": "cn_gf01",
+        "stage_id": "1004",
+        "stage_name": "星光之旅 · 5",
+        "cover_url": "",
+        "latest_online_time": 1788000004,
+        "game_list_status": "GAME_LIST_STATUS_ONLINE"
+      },
+      "today_stats": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "cur": "8000",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "cur": "320",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+          "cur": "9800",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        }
+      ],
+      "trend_data": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "delta_7_day": "70",
+          "delta_7_day_invalid": false,
+          "delta_30_day": "300",
+          "delta_30_day_invalid": false,
+          "daily_info": [],
+          "daily_stats": [
+            {
+              "date": "2026-08-01",
+              "cur": "100",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-02",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-03",
+              "cur": "132",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-04",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-05",
+              "cur": "113",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-06",
+              "cur": "116",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": true
+            },
+            {
+              "date": "2026-08-07",
+              "cur": "136",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-08",
+              "cur": "162",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-09",
+              "cur": "176",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-10",
+              "cur": "171",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-11",
+              "cur": "159",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-12",
+              "cur": "157",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-13",
+              "cur": "173",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-14",
+              "cur": "199",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-15",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-16",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-17",
+              "cur": "206",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-18",
+              "cur": "200",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-19",
+              "cur": "211",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-20",
+              "cur": "236",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-21",
+              "cur": "258",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-22",
+              "cur": "264",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-23",
+              "cur": "254",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-24",
+              "cur": "244",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-25",
+              "cur": "250",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-26",
+              "cur": "272",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-27",
+              "cur": "297",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-28",
+              "cur": "308",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-29",
+              "cur": "301",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-30",
+              "cur": "290",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            }
+          ],
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND",
+          "normalized_info_7d": [],
+          "normalized_stats_7d": [],
+          "multi_group_dist": null
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "delta_7_day": "70",
+          "delta_7_day_invalid": false,
+          "delta_30_day": "300",
+          "delta_30_day_invalid": false,
+          "daily_info": [],
+          "daily_stats": [
+            {
+              "date": "2026-08-01",
+              "cur": "100",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-02",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-03",
+              "cur": "132",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-04",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-05",
+              "cur": "113",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-06",
+              "cur": "116",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": true
+            },
+            {
+              "date": "2026-08-07",
+              "cur": "136",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-08",
+              "cur": "162",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-09",
+              "cur": "176",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-10",
+              "cur": "171",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-11",
+              "cur": "159",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-12",
+              "cur": "157",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-13",
+              "cur": "173",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-14",
+              "cur": "199",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-15",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-16",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-17",
+              "cur": "206",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-18",
+              "cur": "200",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-19",
+              "cur": "211",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-20",
+              "cur": "236",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-21",
+              "cur": "258",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-22",
+              "cur": "264",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-23",
+              "cur": "254",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-24",
+              "cur": "244",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-25",
+              "cur": "250",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-26",
+              "cur": "272",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-27",
+              "cur": "297",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-28",
+              "cur": "308",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-29",
+              "cur": "301",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-30",
+              "cur": "290",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            }
+          ],
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND",
+          "normalized_info_7d": [],
+          "normalized_stats_7d": [],
+          "multi_group_dist": null
+        }
+      ],
+      "metric_groups": [
+        {
+          "group_type": "STAGE_METRIC_GROUP_TYPE_PLAY",
+          "metric_types": [
+            "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+            "METRIC_STAGE_TYPE_AVG_TIME"
+          ]
+        }
+      ],
+      "comment_module_info": {
+        "total_comment_num": "1",
+        "comment_list": [
+          {
+            "comment_id": "sample-comment",
+            "nickname": "示例玩家",
+            "content": "这里是脱敏后的示例评价。",
+            "is_recommend": true,
+            "comment_unix": 1788000000
+          }
+        ]
+      }
+    },
+    "1005": {
+      "today_str": "2026-08-30",
+      "stage_info": {
+        "uid": "100001",
+        "region": "cn_gf01",
+        "stage_id": "1005",
+        "stage_name": "远山来信 · 6",
+        "cover_url": "",
+        "latest_online_time": 1788000005,
+        "game_list_status": "GAME_LIST_STATUS_ONLINE"
+      },
+      "today_stats": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "cur": "8000",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "cur": "320",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+          "cur": "9800",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        }
+      ],
+      "trend_data": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "delta_7_day": "70",
+          "delta_7_day_invalid": false,
+          "delta_30_day": "300",
+          "delta_30_day_invalid": false,
+          "daily_info": [],
+          "daily_stats": [
+            {
+              "date": "2026-08-01",
+              "cur": "100",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-02",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-03",
+              "cur": "132",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-04",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-05",
+              "cur": "113",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-06",
+              "cur": "116",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": true
+            },
+            {
+              "date": "2026-08-07",
+              "cur": "136",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-08",
+              "cur": "162",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-09",
+              "cur": "176",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-10",
+              "cur": "171",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-11",
+              "cur": "159",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-12",
+              "cur": "157",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-13",
+              "cur": "173",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-14",
+              "cur": "199",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-15",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-16",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-17",
+              "cur": "206",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-18",
+              "cur": "200",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-19",
+              "cur": "211",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-20",
+              "cur": "236",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-21",
+              "cur": "258",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-22",
+              "cur": "264",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-23",
+              "cur": "254",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-24",
+              "cur": "244",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-25",
+              "cur": "250",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-26",
+              "cur": "272",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-27",
+              "cur": "297",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-28",
+              "cur": "308",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-29",
+              "cur": "301",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-30",
+              "cur": "290",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            }
+          ],
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND",
+          "normalized_info_7d": [],
+          "normalized_stats_7d": [],
+          "multi_group_dist": null
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "delta_7_day": "70",
+          "delta_7_day_invalid": false,
+          "delta_30_day": "300",
+          "delta_30_day_invalid": false,
+          "daily_info": [],
+          "daily_stats": [
+            {
+              "date": "2026-08-01",
+              "cur": "100",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-02",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-03",
+              "cur": "132",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-04",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-05",
+              "cur": "113",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-06",
+              "cur": "116",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": true
+            },
+            {
+              "date": "2026-08-07",
+              "cur": "136",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-08",
+              "cur": "162",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-09",
+              "cur": "176",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-10",
+              "cur": "171",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-11",
+              "cur": "159",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-12",
+              "cur": "157",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-13",
+              "cur": "173",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-14",
+              "cur": "199",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-15",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-16",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-17",
+              "cur": "206",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-18",
+              "cur": "200",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-19",
+              "cur": "211",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-20",
+              "cur": "236",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-21",
+              "cur": "258",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-22",
+              "cur": "264",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-23",
+              "cur": "254",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-24",
+              "cur": "244",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-25",
+              "cur": "250",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-26",
+              "cur": "272",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-27",
+              "cur": "297",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-28",
+              "cur": "308",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-29",
+              "cur": "301",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-30",
+              "cur": "290",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            }
+          ],
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND",
+          "normalized_info_7d": [],
+          "normalized_stats_7d": [],
+          "multi_group_dist": null
+        }
+      ],
+      "metric_groups": [
+        {
+          "group_type": "STAGE_METRIC_GROUP_TYPE_PLAY",
+          "metric_types": [
+            "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+            "METRIC_STAGE_TYPE_AVG_TIME"
+          ]
+        }
+      ],
+      "comment_module_info": {
+        "total_comment_num": "1",
+        "comment_list": [
+          {
+            "comment_id": "sample-comment",
+            "nickname": "示例玩家",
+            "content": "这里是脱敏后的示例评价。",
+            "is_recommend": true,
+            "comment_unix": 1788000000
+          }
+        ]
+      }
+    },
+    "1006": {
+      "today_str": "2026-08-30",
+      "stage_info": {
+        "uid": "100001",
+        "region": "cn_gf01",
+        "stage_id": "1006",
+        "stage_name": "云海漫游 · 7",
+        "cover_url": "",
+        "latest_online_time": 1788000006,
+        "game_list_status": "GAME_LIST_STATUS_ONLINE"
+      },
+      "today_stats": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "cur": "8000",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "cur": "320",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+          "cur": "9800",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        }
+      ],
+      "trend_data": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "delta_7_day": "70",
+          "delta_7_day_invalid": false,
+          "delta_30_day": "300",
+          "delta_30_day_invalid": false,
+          "daily_info": [],
+          "daily_stats": [
+            {
+              "date": "2026-08-01",
+              "cur": "100",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-02",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-03",
+              "cur": "132",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-04",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-05",
+              "cur": "113",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-06",
+              "cur": "116",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": true
+            },
+            {
+              "date": "2026-08-07",
+              "cur": "136",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-08",
+              "cur": "162",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-09",
+              "cur": "176",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-10",
+              "cur": "171",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-11",
+              "cur": "159",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-12",
+              "cur": "157",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-13",
+              "cur": "173",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-14",
+              "cur": "199",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-15",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-16",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-17",
+              "cur": "206",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-18",
+              "cur": "200",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-19",
+              "cur": "211",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-20",
+              "cur": "236",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-21",
+              "cur": "258",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-22",
+              "cur": "264",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-23",
+              "cur": "254",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-24",
+              "cur": "244",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-25",
+              "cur": "250",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-26",
+              "cur": "272",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-27",
+              "cur": "297",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-28",
+              "cur": "308",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-29",
+              "cur": "301",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-30",
+              "cur": "290",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            }
+          ],
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND",
+          "normalized_info_7d": [],
+          "normalized_stats_7d": [],
+          "multi_group_dist": null
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "delta_7_day": "70",
+          "delta_7_day_invalid": false,
+          "delta_30_day": "300",
+          "delta_30_day_invalid": false,
+          "daily_info": [],
+          "daily_stats": [
+            {
+              "date": "2026-08-01",
+              "cur": "100",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-02",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-03",
+              "cur": "132",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-04",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-05",
+              "cur": "113",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-06",
+              "cur": "116",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": true
+            },
+            {
+              "date": "2026-08-07",
+              "cur": "136",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-08",
+              "cur": "162",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-09",
+              "cur": "176",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-10",
+              "cur": "171",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-11",
+              "cur": "159",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-12",
+              "cur": "157",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-13",
+              "cur": "173",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-14",
+              "cur": "199",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-15",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-16",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-17",
+              "cur": "206",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-18",
+              "cur": "200",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-19",
+              "cur": "211",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-20",
+              "cur": "236",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-21",
+              "cur": "258",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-22",
+              "cur": "264",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-23",
+              "cur": "254",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-24",
+              "cur": "244",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-25",
+              "cur": "250",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-26",
+              "cur": "272",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-27",
+              "cur": "297",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-28",
+              "cur": "308",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-29",
+              "cur": "301",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-30",
+              "cur": "290",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            }
+          ],
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND",
+          "normalized_info_7d": [],
+          "normalized_stats_7d": [],
+          "multi_group_dist": null
+        }
+      ],
+      "metric_groups": [
+        {
+          "group_type": "STAGE_METRIC_GROUP_TYPE_PLAY",
+          "metric_types": [
+            "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+            "METRIC_STAGE_TYPE_AVG_TIME"
+          ]
+        }
+      ],
+      "comment_module_info": {
+        "total_comment_num": "1",
+        "comment_list": [
+          {
+            "comment_id": "sample-comment",
+            "nickname": "示例玩家",
+            "content": "这里是脱敏后的示例评价。",
+            "is_recommend": true,
+            "comment_unix": 1788000000
+          }
+        ]
+      }
+    },
+    "1007": {
+      "today_str": "2026-08-30",
+      "stage_info": {
+        "uid": "100001",
+        "region": "cn_gf01",
+        "stage_id": "1007",
+        "stage_name": "星光之旅 · 8",
+        "cover_url": "",
+        "latest_online_time": 1788000007,
+        "game_list_status": "GAME_LIST_STATUS_ONLINE"
+      },
+      "today_stats": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "cur": "8000",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "cur": "320",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+          "cur": "9800",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        }
+      ],
+      "trend_data": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "delta_7_day": "70",
+          "delta_7_day_invalid": false,
+          "delta_30_day": "300",
+          "delta_30_day_invalid": false,
+          "daily_info": [],
+          "daily_stats": [
+            {
+              "date": "2026-08-01",
+              "cur": "100",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-02",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-03",
+              "cur": "132",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-04",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-05",
+              "cur": "113",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-06",
+              "cur": "116",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": true
+            },
+            {
+              "date": "2026-08-07",
+              "cur": "136",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-08",
+              "cur": "162",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-09",
+              "cur": "176",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-10",
+              "cur": "171",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-11",
+              "cur": "159",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-12",
+              "cur": "157",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-13",
+              "cur": "173",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-14",
+              "cur": "199",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-15",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-16",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-17",
+              "cur": "206",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-18",
+              "cur": "200",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-19",
+              "cur": "211",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-20",
+              "cur": "236",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-21",
+              "cur": "258",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-22",
+              "cur": "264",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-23",
+              "cur": "254",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-24",
+              "cur": "244",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-25",
+              "cur": "250",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-26",
+              "cur": "272",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-27",
+              "cur": "297",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-28",
+              "cur": "308",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-29",
+              "cur": "301",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-30",
+              "cur": "290",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            }
+          ],
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND",
+          "normalized_info_7d": [],
+          "normalized_stats_7d": [],
+          "multi_group_dist": null
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "delta_7_day": "70",
+          "delta_7_day_invalid": false,
+          "delta_30_day": "300",
+          "delta_30_day_invalid": false,
+          "daily_info": [],
+          "daily_stats": [
+            {
+              "date": "2026-08-01",
+              "cur": "100",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-02",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-03",
+              "cur": "132",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-04",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-05",
+              "cur": "113",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-06",
+              "cur": "116",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": true
+            },
+            {
+              "date": "2026-08-07",
+              "cur": "136",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-08",
+              "cur": "162",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-09",
+              "cur": "176",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-10",
+              "cur": "171",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-11",
+              "cur": "159",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-12",
+              "cur": "157",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-13",
+              "cur": "173",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-14",
+              "cur": "199",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-15",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-16",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-17",
+              "cur": "206",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-18",
+              "cur": "200",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-19",
+              "cur": "211",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-20",
+              "cur": "236",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-21",
+              "cur": "258",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-22",
+              "cur": "264",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-23",
+              "cur": "254",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-24",
+              "cur": "244",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-25",
+              "cur": "250",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-26",
+              "cur": "272",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-27",
+              "cur": "297",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-28",
+              "cur": "308",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-29",
+              "cur": "301",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-30",
+              "cur": "290",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            }
+          ],
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND",
+          "normalized_info_7d": [],
+          "normalized_stats_7d": [],
+          "multi_group_dist": null
+        }
+      ],
+      "metric_groups": [
+        {
+          "group_type": "STAGE_METRIC_GROUP_TYPE_PLAY",
+          "metric_types": [
+            "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+            "METRIC_STAGE_TYPE_AVG_TIME"
+          ]
+        }
+      ],
+      "comment_module_info": {
+        "total_comment_num": "1",
+        "comment_list": [
+          {
+            "comment_id": "sample-comment",
+            "nickname": "示例玩家",
+            "content": "这里是脱敏后的示例评价。",
+            "is_recommend": true,
+            "comment_unix": 1788000000
+          }
+        ]
+      }
+    },
+    "1008": {
+      "today_str": "2026-08-30",
+      "stage_info": {
+        "uid": "100001",
+        "region": "cn_gf01",
+        "stage_id": "1008",
+        "stage_name": "远山来信 · 9",
+        "cover_url": "",
+        "latest_online_time": 1788000008,
+        "game_list_status": "GAME_LIST_STATUS_ONLINE"
+      },
+      "today_stats": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "cur": "8000",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "cur": "320",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_GOOD_RATE",
+          "cur": "9800",
+          "cur_invalid": false,
+          "delta": "10",
+          "delta_invalid": false,
+          "value_type": "METRIC_VALUE_TYPE_PER_TEN_THOUSAND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND"
+        }
+      ],
+      "trend_data": [
+        {
+          "metric_type": "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+          "delta_7_day": "70",
+          "delta_7_day_invalid": false,
+          "delta_30_day": "300",
+          "delta_30_day_invalid": false,
+          "daily_info": [],
+          "daily_stats": [
+            {
+              "date": "2026-08-01",
+              "cur": "100",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-02",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-03",
+              "cur": "132",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-04",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-05",
+              "cur": "113",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-06",
+              "cur": "116",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": true
+            },
+            {
+              "date": "2026-08-07",
+              "cur": "136",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-08",
+              "cur": "162",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-09",
+              "cur": "176",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-10",
+              "cur": "171",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-11",
+              "cur": "159",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-12",
+              "cur": "157",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-13",
+              "cur": "173",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-14",
+              "cur": "199",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-15",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-16",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-17",
+              "cur": "206",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-18",
+              "cur": "200",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-19",
+              "cur": "211",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-20",
+              "cur": "236",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-21",
+              "cur": "258",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-22",
+              "cur": "264",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-23",
+              "cur": "254",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-24",
+              "cur": "244",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-25",
+              "cur": "250",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-26",
+              "cur": "272",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-27",
+              "cur": "297",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-28",
+              "cur": "308",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-29",
+              "cur": "301",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-30",
+              "cur": "290",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_NORMAL",
+              "cur_invalid": false
+            }
+          ],
+          "value_type": "METRIC_VALUE_TYPE_NORMAL",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND",
+          "normalized_info_7d": [],
+          "normalized_stats_7d": [],
+          "multi_group_dist": null
+        },
+        {
+          "metric_type": "METRIC_STAGE_TYPE_AVG_TIME",
+          "delta_7_day": "70",
+          "delta_7_day_invalid": false,
+          "delta_30_day": "300",
+          "delta_30_day_invalid": false,
+          "daily_info": [],
+          "daily_stats": [
+            {
+              "date": "2026-08-01",
+              "cur": "100",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-02",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-03",
+              "cur": "132",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-04",
+              "cur": "124",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-05",
+              "cur": "113",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-06",
+              "cur": "116",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": true
+            },
+            {
+              "date": "2026-08-07",
+              "cur": "136",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-08",
+              "cur": "162",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-09",
+              "cur": "176",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-10",
+              "cur": "171",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-11",
+              "cur": "159",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-12",
+              "cur": "157",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-13",
+              "cur": "173",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-14",
+              "cur": "199",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-15",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-16",
+              "cur": "218",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-17",
+              "cur": "206",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-18",
+              "cur": "200",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-19",
+              "cur": "211",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-20",
+              "cur": "236",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-21",
+              "cur": "258",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-22",
+              "cur": "264",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-23",
+              "cur": "254",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-24",
+              "cur": "244",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-25",
+              "cur": "250",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-26",
+              "cur": "272",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-27",
+              "cur": "297",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-28",
+              "cur": "308",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-29",
+              "cur": "301",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            },
+            {
+              "date": "2026-08-30",
+              "cur": "290",
+              "delta": "7",
+              "value_type": "METRIC_VALUE_TYPE_SECOND",
+              "cur_invalid": false
+            }
+          ],
+          "value_type": "METRIC_VALUE_TYPE_SECOND",
+          "calculate_type": "METRIC_CALCULATE_TYPE_ROUND",
+          "normalized_info_7d": [],
+          "normalized_stats_7d": [],
+          "multi_group_dist": null
+        }
+      ],
+      "metric_groups": [
+        {
+          "group_type": "STAGE_METRIC_GROUP_TYPE_PLAY",
+          "metric_types": [
+            "METRIC_STAGE_TYPE_STAGE_HOT_SCORE",
+            "METRIC_STAGE_TYPE_AVG_TIME"
+          ]
+        }
+      ],
+      "comment_module_info": {
+        "total_comment_num": "1",
+        "comment_list": [
+          {
+            "comment_id": "sample-comment",
+            "nickname": "示例玩家",
+            "content": "这里是脱敏后的示例评价。",
+            "is_recommend": true,
+            "comment_unix": 1788000000
+          }
+        ]
+      }
+    }
+  }
+}
