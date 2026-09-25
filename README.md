@@ -1,4 +1,4 @@
-> This is an independently versioned plugin repository. Local builds use the stable Core SDK from the adjacent `Wonderland_Assistant` checkout; see [Core repository boundaries](../../Wonderland_Assistant/docs/REPOSITORY-BOUNDARIES.md).
+> This is an independently versioned plugin repository. Local builds use the stable Core SDK from this checkout; see [Core repository boundaries](../../docs/REPOSITORY-BOUNDARIES.md).
 
 # 我的奇域插件
 
@@ -25,6 +25,12 @@ pnpm build
 ```
 
 生成的 Windows x86_64 MSVC debug 包位于 `target/my-wonderland-plugin`。启动 debug Core，在“设置 → 插件管理”安装该目录并启用插件，然后从 Workspace 的“我的奇域”主入口打开。
+
+## UI 开发
+
+UI 源码由 Vite 编译到插件仓库内的 `ui/dist`，不会直接写入 Core 的用户数据或插件安装目录。修改后在插件仓库根目录运行 `pnpm build`，生成 `target/my-wonderland-plugin`，再通过 Core 的“设置 → 插件管理”安装。
+
+Core 按插件版本管理安装目录。同一版本已经安装时，先在插件管理中移除旧插件再安装新包，或提升 `package/manifest.json` 的版本号；移除时保留插件数据即可。清单、契约和 Rust 后端改动也使用同一构建与安装流程。
 
 ## 数据
 

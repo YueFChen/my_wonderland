@@ -5,9 +5,9 @@ import { t } from './i18n'
 import { metricLabel } from './i18n/metric'
 
 /** 今日指标卡片；delta 无效时展示占位而不按 0 计算。 */
-export function Stats({ stats }: { stats: Stat[] }) {
+export function Stats({ stats, className = '' }: { stats: Stat[]; className?: string }) {
   return (
-    <div className="mw-stats">
+    <div className={`mw-stats${className ? ` ${className}` : ''}`}>
       {stats.map((stat) => {
         const delta = formatMetric(
           stat.delta,

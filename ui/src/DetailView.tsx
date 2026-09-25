@@ -6,8 +6,9 @@ import { Stats } from './Stats'
 import { formatTime, statusClass, statusLabel } from './display'
 import { t } from './i18n'
 import { metricLabel } from './i18n/metric'
+import { CoverImage } from './CoverImage'
 
-/** 单个作品详情：hero 封面 + 指标分组、今日指标、趋势与评价。 */
+/** 单个作品详情：封面信息卡与指标分组、今日指标并排，后接趋势与评价。 */
 export function DetailView({ detail }: { detail: Detail }) {
   const [group, setGroup] = useState('all')
   const active = detail.metric_groups.find((item) => item.group_type === group)
@@ -23,47 +24,46 @@ export function DetailView({ detail }: { detail: Detail }) {
 
   return (
     <>
-      <section className="mw-hero">
-        <div className="mw-hero-media">
-          {cover ? (
-            <img src={cover} alt="" referrerPolicy="no-referrer" />
-          ) : (
-            <div className="mw-hero-blank" />
-          )}
-        </div>
-        <div className="mw-hero-body">
-          <span className={`mw-status ${statusClass(info.game_list_status)}`}>
-            {statusLabel(info.game_list_status)}
-          </span>
-          <h2>{info.stage_name}</h2>
-          <div className="mw-hero-meta">
-            <span>#{info.stage_id}</span>
-            <span>
-              {t('detail.latestOnline')} · {formatTime(info.latest_online_time)}
-            </span>
+      <div className="mw-detail-overview">
+        <section className="mw-hero">
+          <div className="mw-hero-media">
+            <CoverImage src={cover} alt="" />
           </div>
-        </div>
-      </section>
-
-      <div className="mw-groups" data-label={t('detail.metricGroup')}>
-        <div className="mw-range">
-          <button aria-pressed={group === 'all'} onClick={() => setGroup('all')}>
-            {t('detail.allGroups')}
-          </button>
-          {detail.metric_groups.map((item) => (
-            <button
-              aria-pressed={group === item.group_type}
-              key={item.group_type}
-              onClick={() => setGroup(item.group_type)}
-            >
-              {metricLabel(item.group_type)}
-            </button>
-          ))}
+          <div className="mw-hero-body">
+            <span className={`mw-status ${statusClass(info.game_list_status)}`}>
+              {statusLabel(info.game_list_status)}
+            </span>
+            <h2>{info.stage_name}</h2>
+            <div className="mw-hero-meta">
+              <span>#{info.stage_id}</span>
+              <span>
+                {t('detail.latestOnline')} · {formatTime(info.latest_online_time)}
+              </span>
+            </div>
+          </div>
+        </section>
+        <div className="mw-detail-metrics">
+          <div className="mw-groups" data-label={t('detail.metricGroup')}>
+            <div className="mw-range">
+              <button aria-pressed={group === 'all'} onClick={() => setGroup('all')}>
+                {t('detail.allGroups')}
+              </button>
+              {detail.metric_groups.map((item) => (
+                <button
+                  aria-pressed={group === item.group_type}
+                  key={item.group_type}
+                  onClick={() => setGroup(item.group_type)}
+                >
+                  {metricLabel(item.group_type)}
+                </button>
+              ))}
+            </div>
+          </div>
+          <Stats key={group} stats={stats} className="mw-detail-stats" />
         </div>
       </div>
 
-      <Stats stats={stats} />
-      <Trends trends={trends} />
+      <Trends trends={trends} detail />
 
       <section>
         <div className="mw-section-head">

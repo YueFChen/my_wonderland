@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import type { Scope, Series, Stage } from './types.generated'
 import type { AccountSnapshot } from '@wonderland/plugin-ui-sdk'
 
@@ -69,8 +69,10 @@ export function MyWonderlandPage({ api, snapshot }: Props) {
   const [busy, setBusy] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
-  const [filter, setFilter] = useState<Filter>('all')
+  const [filter, setFilter] = useState<Filter>('online')
   const [stageId, setStageId] = useState<string | null>(null)
+  const listScroll = useRef(0)
+  const restoreListScroll = useRef(false)
   // 账号/角色切换后丢弃在途响应，避免旧数据覆盖新选择。
   const generation = useRef(0)
   const mounted = useRef(true)
@@ -107,7 +109,7 @@ export function MyWonderlandPage({ api, snapshot }: Props) {
     setSeries(null)
     setError('')
     setStageId(null)
-    setFilter('all')
+    setFilter('online')
     setBusy(false)
     if (!scope) {
       setLoading(false)
@@ -169,33 +171,51 @@ export function MyWonderlandPage({ api, snapshot }: Props) {
 
   const detail = stageId ? series?.details[stageId] : undefined
 
+  useLayoutEffect(() => {
+    if (detail) window.scrollTo({ top: 0, behavior: 'instant' })
+    else if (restoreListScroll.current) {
+      window.scrollTo({ top: listScroll.current, behavior: 'instant' })
+      restoreListScroll.current = false
+    }
+  }, [detail])
+
   return (
     <section className="mw" aria-label={t('works.title')}>
       <div className="mw-toolbar">
-        <label>
-          {t('works.account')}
-          <select
-            aria-label={t('works.account')}
-            value={key}
-            onChange={(event) => {
-              generation.current++
-              setSelected(event.target.value)
-            }}
-          >
-            {scopes.map((item) => (
-              <option key={scopeKey(item.scope)} value={scopeKey(item.scope)}>
-                {item.label}
-              </option>
-            ))}
-          </select>
-        </label>
-        <span>
-          {busy
-            ? t('works.updating')
-            : series
-              ? `${t('works.updatedAt')} · ${formatTime(series.updated_at)}`
-              : t('works.archivePolicy')}
-        </span>
+        {detail && (
+          <button className="mw-back" onClick={() => {
+            restoreListScroll.current = true
+            setStageId(null)
+          }}>
+            ← {t('works.back')}
+          </button>
+        )}
+        <div className="mw-toolbar-end">
+          <label className="mw-role-picker">
+            <span>{t('works.account')}</span>
+            <select
+              aria-label={t('works.account')}
+              value={key}
+              onChange={(event) => {
+                generation.current++
+                setSelected(event.target.value)
+              }}
+            >
+              {scopes.map((item) => (
+                <option key={scopeKey(item.scope)} value={scopeKey(item.scope)}>
+                  {item.label}
+                </option>
+              ))}
+            </select>
+          </label>
+          <span className="mw-toolbar-meta">
+            {busy
+              ? t('works.updating')
+              : series
+                ? `${t('works.updatedAt')} · ${formatTime(series.updated_at)}`
+                : t('works.archivePolicy')}
+          </span>
+        </div>
       </div>
 
       {!scope && <div className="mw-empty">{t('works.noAccount')}</div>}
@@ -219,15 +239,12 @@ export function MyWonderlandPage({ api, snapshot }: Props) {
       ) : !series ? (
         <div className="mw-empty">{t('works.emptyLocal')}</div>
       ) : detail ? (
-        <>
-          <button className="mw-back" onClick={() => setStageId(null)}>
-            ← {t('works.back')}
-          </button>
+        <div className="mw-view" key={`detail-${stageId}`}>
           <DetailView detail={detail} />
-        </>
+        </div>
       ) : (
-        <>
-          <div className="mw-stats">
+        <div className="mw-view" key="works-list">
+          <div className="mw-stats mw-overview-stats">
             <article className="mw-stat">
               <span>{t('works.totalStages')}</span>
               <strong>{summary.total}</strong>
@@ -246,31 +263,38 @@ export function MyWonderlandPage({ api, snapshot }: Props) {
             </article>
           </div>
 
-          <nav className="mw-filters" aria-label={t('works.filterAria')}>
-            {FILTERS.map((item) => (
-              <button
-                key={item.value}
-                aria-pressed={filter === item.value}
-                onClick={() => setFilter(item.value)}
-              >
-                {t(item.labelKey)}
-              </button>
-            ))}
-          </nav>
+          <div className="mw-list-head">
+            <div className="mw-list-title">
+              <h2>{t('works.listHeading')}</h2>
+              <span>{t('common.worksUnit', { count: stages.length })}</span>
+            </div>
+            <nav className="mw-filters" aria-label={t('works.filterAria')}>
+              {FILTERS.map((item) => (
+                <button
+                  key={item.value}
+                  aria-pressed={filter === item.value}
+                  onClick={() => setFilter(item.value)}
+                >
+                  {t(item.labelKey)}
+                </button>
+              ))}
+            </nav>
+          </div>
 
           <WorksGrid
             key={filter}
             stages={stages}
             details={series.details}
             empty={t(active.emptyKey)}
-            onOpen={(id) => setStageId(id)}
+            onOpen={(id) => {
+              listScroll.current = window.scrollY
+              setStageId(id)
+            }}
           />
 
           {series.overview.trend_data.length > 0 && <Trends trends={series.overview.trend_data} />}
-        </>
+        </div>
       )}
-
-      <footer>{t('works.invalid')}</footer>
     </section>
   )
 }

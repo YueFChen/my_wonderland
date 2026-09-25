@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type MouseEvent as ReactMouseEvent, type ReactNode } from 'react'
 import type { Distribution, Trend } from './types.generated'
 
 import { formatMetric, numeric, trendPoints } from './metrics'
@@ -8,7 +8,7 @@ import { metricLabel } from './i18n/metric'
 const DISTRIBUTION_COLORS = ['#7663b4', '#9b7bd1', '#b6a0ed', '#d3c6f1', '#eedbfc']
 
 /** 趋势区：按 7 / 30 天（或本地留存全期）展示折线与时长分布。 */
-export function Trends({ trends }: { trends: Trend[] }) {
+export function Trends({ trends, detail = false }: { trends: Trend[]; detail?: boolean }) {
   // 默认看官方滚动窗口；本地留存更久时可切到全期。
   const [days, setDays] = useState(30)
   const ranges: [number, string][] = [
@@ -17,27 +17,16 @@ export function Trends({ trends }: { trends: Trend[] }) {
     [0, t('chart.rangeAll')],
   ]
 
-  // 时长分布独占整行，会把折线流断成若干段；每段内落单的最后一张铺满整行，
-  // 避免出现「半行图 + 半行空白」。
+  // 分布图紧跟对应的趋势图，和其余图表一起进入响应式网格。
   const items: ReactNode[] = []
-  let segment: Trend[] = []
-  const closeSegment = () => {
-    segment.forEach((trend, index) => {
-      const alone = segment.length % 2 === 1 && index === segment.length - 1
-      items.push(<Chart key={trend.metric_type} trend={trend} days={days} wide={alone} />)
-    })
-    segment = []
-  }
   for (const trend of trends) {
-    segment.push(trend)
+    items.push(<Chart key={trend.metric_type} trend={trend} days={days} />)
     if (trend.multi_group_dist) {
-      closeSegment()
       items.push(
         <DistributionChart key={`${trend.metric_type}-dist`} data={trend.multi_group_dist} days={days} />,
       )
     }
   }
-  closeSegment()
 
   return (
     <>
@@ -54,13 +43,14 @@ export function Trends({ trends }: { trends: Trend[] }) {
       {trends.length === 0 ? (
         <div className="mw-empty">{t('chart.noData')}</div>
       ) : (
-        <div className="mw-charts">{items}</div>
+        <div className={`mw-charts${detail ? ' mw-charts--detail' : ''}`}>{items}</div>
       )}
     </>
   )
 }
 
-function Chart({ trend, days, wide }: { trend: Trend; days: number; wide?: boolean }) {
+function Chart({ trend, days }: { trend: Trend; days: number }) {
+  const [hover, setHover] = useState<{ index: number; left: number; top: number; below: boolean } | null>(null)
   const points = trendPoints(trend, days)
   const values = points.map((point) =>
     point.cur_invalid ? null : numeric(point.cur, point.value_type, trend.metric_type),
@@ -73,6 +63,40 @@ function Chart({ trend, days, wide }: { trend: Trend; days: number; wide?: boole
     48 + (index / Math.max(1, points.length - 1)) * 470,
     150 - ((value - min) / span) * 108,
   ]
+  useEffect(() => setHover(null), [days, points.length, trend.metric_type])
+
+  const onPlotMove = (event: ReactMouseEvent<SVGSVGElement>) => {
+    const rect = event.currentTarget.getBoundingClientRect()
+    if (rect.width === 0 || rect.height === 0) return
+    const pointerX = ((event.clientX - rect.left) / rect.width) * 560
+    const plotRect = event.currentTarget.parentElement?.getBoundingClientRect() ?? rect
+    let nearestIndex = -1
+    let nearestDistance = Number.POSITIVE_INFINITY
+    for (let index = 0; index < values.length; index++) {
+      const value = values[index]
+      if (value === null) continue
+      const distance = Math.abs(xy(index, value)[0] - pointerX)
+      if (distance < nearestDistance) {
+        nearestIndex = index
+        nearestDistance = distance
+      }
+    }
+    if (nearestIndex < 0) return
+    const index = nearestIndex
+    const value = values[index]
+    if (value === null) return
+    const [x, y] = xy(index, value)
+    const halfTooltip = Math.min(92, plotRect.width / 2 - 8)
+    const pointLeft = rect.left - plotRect.left + (x / 560) * rect.width
+    const left = Math.max(halfTooltip, Math.min(plotRect.width - halfTooltip, pointLeft))
+    const top = rect.top - plotRect.top + (y / 190) * rect.height
+    setHover((current) => current?.index === index
+      ? current
+      : { index, left, top, below: top < 58 })
+  }
+  const hoveredValue = hover && hover.index < values.length ? values[hover.index] : null
+  const hoveredPoint = hover && hoveredValue !== null ? points[hover.index] : null
+  const hoveredCoords = hover && hoveredValue !== null ? xy(hover.index, hoveredValue) : null
 
   let path = ''
   let gap = true
@@ -102,7 +126,7 @@ function Chart({ trend, days, wide }: { trend: Trend; days: number; wide?: boole
   )
 
   return (
-    <article className="mw-panel mw-chart" data-wide={wide ? 'true' : undefined}>
+    <article className="mw-panel mw-chart">
       <h3>{metricLabel(trend.metric_type)}</h3>
       <p className="mw-chart-summary">
         <span>
@@ -117,36 +141,68 @@ function Chart({ trend, days, wide }: { trend: Trend; days: number; wide?: boole
       {!valid.length ? (
         <p className="mw-chart-empty">{t('chart.noTrend')}</p>
       ) : (
-        <svg
-          viewBox="0 0 560 190"
-          role="img"
-          aria-label={t('chart.aria', { metric: metricLabel(trend.metric_type) })}
-        >
-          {[42, 96, 150].map((y) => (
-            <line key={y} x1="48" x2="518" y1={y} y2={y} stroke="currentColor" opacity=".1" />
-          ))}
-          <text x="6" y="45">{max.toLocaleString('zh-CN', { maximumFractionDigits: 1 })}</text>
-          <text x="6" y="154">{min.toLocaleString('zh-CN', { maximumFractionDigits: 1 })}</text>
-          <path d={path} fill="none" stroke="currentColor" strokeWidth="2.5" />
-          {values.map((value, index) => {
-            if (value === null) return null
-            const [cx, cy] = xy(index, value)
-            const point = points[index]
-            return (
-              <circle key={point.date} cx={cx} cy={cy} r="3" fill="currentColor">
-                <title>
-                  {point.date} ·{' '}
-                  {formatMetric(point.cur, point.value_type, trend.metric_type, false, trend.calculate_type)}
-                </title>
-              </circle>
-            )
-          })}
-          <text x="48" y="181">{points[0]?.date}</text>
-          <text x="518" y="181" textAnchor="end">{points.at(-1)?.date}</text>
-        </svg>
+        <div className="mw-chart-plot">
+          <svg
+            viewBox="0 0 560 190"
+            role="img"
+            aria-label={t('chart.aria', { metric: metricLabel(trend.metric_type) })}
+            onMouseMove={onPlotMove}
+            onMouseLeave={() => setHover(null)}
+          >
+            {[42, 96, 150].map((y) => (
+              <line key={y} x1="48" x2="518" y1={y} y2={y} stroke="currentColor" opacity=".1" />
+            ))}
+            <text x="6" y="45">{max.toLocaleString('zh-CN', { maximumFractionDigits: 1 })}</text>
+            <text x="6" y="154">{min.toLocaleString('zh-CN', { maximumFractionDigits: 1 })}</text>
+            <path d={path} fill="none" stroke="currentColor" strokeWidth="2.5" />
+            {values.map((value, index) => {
+              if (value === null) return null
+              const [cx, cy] = xy(index, value)
+              return <circle key={points[index].date} cx={cx} cy={cy} r="3" fill="currentColor" />
+            })}
+            {hoveredCoords && (
+              <g aria-hidden="true" pointerEvents="none">
+                <line
+                  x1={hoveredCoords[0]}
+                  x2={hoveredCoords[0]}
+                  y1="42"
+                  y2="150"
+                  stroke="currentColor"
+                  strokeDasharray="4 4"
+                  opacity=".45"
+                />
+                <circle
+                  cx={hoveredCoords[0]}
+                  cy={hoveredCoords[1]}
+                  r="6"
+                  fill="currentColor"
+                  stroke="var(--app-glass-subtle)"
+                  strokeWidth="3"
+                />
+              </g>
+            )}
+            <text x="48" y="181">{points[0]?.date}</text>
+            <text x="518" y="181" textAnchor="end">{points.at(-1)?.date}</text>
+          </svg>
+          {hover && hoveredValue !== null && hoveredPoint && (
+            <div
+              className="mw-chart-tooltip"
+              role="tooltip"
+              style={{
+                left: `${hover.left}px`,
+                top: `${hover.below ? hover.top + 8 : hover.top - 8}px`,
+                transform: `translate(-50%, ${hover.below ? '0' : '-100%'})`,
+              }}
+            >
+              <strong>
+                {formatMetric(hoveredPoint.cur, hoveredPoint.value_type, trend.metric_type, false, trend.calculate_type)}
+              </strong>
+              <span>{hoveredPoint.date}</span>
+            </div>
+          )}
+        </div>
       )}
-      <details>
-        <summary>{t('chart.details')}</summary>
+      <DataDialog title={metricLabel(trend.metric_type)} label={t('chart.details')}>
         <div className="mw-point-table">
           <table>
             <thead>
@@ -165,7 +221,7 @@ function Chart({ trend, days, wide }: { trend: Trend; days: number; wide?: boole
             </tbody>
           </table>
         </div>
-      </details>
+      </DataDialog>
     </article>
   )
 }
@@ -181,7 +237,7 @@ export function DistributionChart({ data, days }: { data: Distribution; days: nu
     max === '-1' ? t('stats.minutesAbove', { min }) : t('stats.minutesRange', { min, max })
 
   return (
-    <article className="mw-panel mw-distribution">
+    <article className="mw-panel mw-chart mw-distribution">
       <div className="mw-chart-heading">
         <h3>{t('stats.distributionTitle')}</h3>
         <select
@@ -228,8 +284,7 @@ export function DistributionChart({ data, days }: { data: Distribution; days: nu
           ))}
         </div>
       </div>
-      <details>
-        <summary>{t('stats.distributionDetail')}</summary>
+      <DataDialog title={t('stats.distributionTitle')} label={t('stats.distributionDetail')}>
         <div className="mw-point-table">
           <table>
             <thead>
@@ -254,7 +309,53 @@ export function DistributionChart({ data, days }: { data: Distribution; days: nu
             </tbody>
           </table>
         </div>
-      </details>
+      </DataDialog>
     </article>
+  )
+}
+
+function DataDialog({
+  title,
+  label,
+  children,
+}: {
+  title: string
+  label: string
+  children: ReactNode
+}) {
+  const dialog = useRef<HTMLDialogElement>(null)
+
+  return (
+    <>
+      <button
+        className="mw-data-trigger"
+        type="button"
+        aria-haspopup="dialog"
+        onClick={() => dialog.current?.showModal()}
+      >
+        {label}
+      </button>
+      <dialog
+        className="mw-data-dialog"
+        aria-label={title}
+        ref={dialog}
+        onClick={(event) => {
+          if (event.target === event.currentTarget) event.currentTarget.close()
+        }}
+      >
+        <header className="mw-data-dialog-header">
+          <h3>{title}</h3>
+          <button
+            className="mw-data-dialog-close"
+            type="button"
+            aria-label={t('common.close')}
+            onClick={() => dialog.current?.close()}
+          >
+            ×
+          </button>
+        </header>
+        {children}
+      </dialog>
+    </>
   )
 }

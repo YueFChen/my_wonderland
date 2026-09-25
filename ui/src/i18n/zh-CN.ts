@@ -19,6 +19,7 @@ export const zh = {
   'works.emptyDeleted': '暂无已删除作品。',
   'works.noAccount': '请先在账号页登录并同步角色。',
   'works.account': '账号 / 角色',
+  'works.listHeading': '作品列表',
   'works.updatedAt': '数据更新于',
   'works.updating': '正在更新…',
   'works.collecting': '正在采集总览、作品与详情…',
@@ -41,7 +42,6 @@ export const zh = {
   /** 官方只给滚动窗口，本地按日期去重后长期留存。 */
   'works.archivePolicy': '数据按日期去重后留存于本机，官方窗口之外的历史仍可查看。',
   'works.partial': '自动抓取失败不会影响已有数据；下次进入页面会重试。',
-  'works.invalid': '— 表示官方未提供有效数据，不按 0 计算。',
   'works.previous': '上一页',
   'works.next': '下一页',
 
@@ -76,7 +76,7 @@ export const zh = {
   'chart.delta7': '7 日变化',
   'chart.delta30': '30 日变化',
   /** 图表无障碍描述，参数为指标名。 */
-  'chart.aria': '{metric}趋势图，详细数值可在下方展开',
+  'chart.aria': '{metric}趋势图，可在侧边抽屉中查看数据明细',
   'chart.details': '查看数据明细',
   /** 数据明细表列头（趋势表与分布表共用）。 */
   'chart.pointsDate': '日期',
@@ -92,6 +92,7 @@ export const zh = {
   'common.statusDeleted': '已删除',
   'common.unknown': '未知状态',
   'common.failed': '操作失败',
+  'common.close': '关闭',
 
   /** 数值单位（metrics.ts）。 */
   'metric.hours': '{hours}小时',

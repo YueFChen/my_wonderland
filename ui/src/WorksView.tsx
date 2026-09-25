@@ -4,6 +4,7 @@ import type { Detail, Stage } from './types.generated'
 import { statusClass, statusLabel } from './display'
 import { t, type MessageKey } from './i18n'
 import { formatMetric } from './metrics'
+import { CoverImage } from './CoverImage'
 
 const PAGE_SIZE = 12
 // 存 key 而不是取好的文案：卡片是模块级常量，取值留到渲染时才发生。
@@ -53,11 +54,7 @@ export function WorksGrid({ stages, details, empty, onOpen }: WorksGridProps) {
               onClick={openable ? () => onOpen(info.stage_id) : undefined}
             >
               <div className="mw-card-cover">
-                {cover ? (
-                  <img src={cover} alt="" loading="lazy" referrerPolicy="no-referrer" />
-                ) : (
-                  <div className="mw-card-blank" />
-                )}
+                <CoverImage src={cover} alt="" loading="lazy" />
                 <span className={`mw-status ${statusClass(info.game_list_status)}`}>
                   {statusLabel(info.game_list_status)}
                 </span>
