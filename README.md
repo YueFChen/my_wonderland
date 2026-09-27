@@ -30,6 +30,8 @@ pnpm build
 
 本仓库的 GitHub Release 提供 Core 可安装的 `.wplug` 文件。发布工作流在 Windows x86_64 runner 上检出固定版本的 Core SDK/UI 包，在插件目录执行锁定依赖安装、UI 类型检查和 Rust release 构建，然后生成带 `checksums.json` 的 ZIP 格式 `.wplug`。工作流只在推送与 `package/manifest.json` 版本一致的 `v<version>` 标签时创建 Release。
 
+目录只登记插件身份和 Ed25519 公钥；插件版本由 Release 附带的 `<id>-update.json` 自行维护。发布工作流使用仓库 Actions secret `PLUGIN_UPDATE_SIGNING_KEY` 对版本、下载地址、包 SHA-256、兼容性和能力清单签名。首次登记时运行 `node scripts/generate-update-signing-key.mjs`，将 `privateSeedBase64` 保存为仓库 Actions secret，并将 `publicKeyHex` 登记到目录。私钥不得提交到仓库或写入日志。轮换密钥时，先用新密钥重新签署当前版本清单并发布附件，再更新目录中的公钥；两步之间客户端会暂时无法验证更新信息。
+
 在 Core checkout 的 `plugins/my_wonderland` 路径开发或打包，可以使用其相对路径 SDK/UI 依赖：
 
 ```powershell
@@ -40,7 +42,7 @@ pnpm build:release
 
 本地 release 包位于 `target/release/my_wonderland-<version>-windows-x86_64.wplug`。发布时先让 `package/manifest.json`、根 `package.json`、`ui/package.json` 和 Rust workspace 版本保持一致并合并到 `main`，再推送对应标签，例如 `v0.1.0`。GitHub Actions 会将 `.wplug` 附加到 [本仓库的 Releases](https://github.com/YueFChen/my_wonderland/releases)。
 
-Release 附件生成后，向 [Wonderland 插件目录](https://github.com/YueFChen/Wonderland_Plugin_Catalog) 的 `catalog/v1/index.json` 提交 PR，登记 Release 下载地址、包 SHA-256、字节数、Core/协议/UI 兼容范围和能力列表。目录 CI 会下载并校验 Release 包。`checksums.json` 检查包内文件完整性；目录审核记录中的 SHA-256 用来校验整个下载包。
+首次登记时，向 [Wonderland 插件目录](https://github.com/YueFChen/Wonderland_Plugin_Catalog) 提交 PR，在 `catalog/v2/plugins/{id}.json` 登记插件身份、稳定的 latest update-manifest 地址和 Ed25519 公钥。后续版本不需要改目录；Release 工作流自动附加签名清单，Core 据此发现并校验当前版本，再校验 `.wplug` 下载包及其内部 `checksums.json`。目录 CI 在登记 PR 时验证签名清单、Release 包、包内校验和与插件元数据。
 
 发布构建使用的 Core SDK/UI 基线固定在 `.github/workflows/release.yml`。升级宿主兼容范围或采用新的 SDK/UI 能力时，应先确认目标 Core 版本，再同步更新该固定版本和清单兼容范围。
 
