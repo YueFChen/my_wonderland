@@ -8,10 +8,11 @@ import { t } from './i18n'
 import { metricLabel } from './i18n/metric'
 import { CoverImage } from './CoverImage'
 
-/** 单个作品详情：封面信息卡与指标分组、今日指标并排，后接趋势与评价。 */
+/** 单个关卡详情：封面信息与指标分组并排，后接趋势与评价。 */
 export function DetailView({ detail }: { detail: Detail }) {
   const [group, setGroup] = useState('all')
-  const active = detail.metric_groups.find((item) => item.group_type === group)
+  const active = group === 'all' ? undefined : detail.metric_groups.find((item) => item.group_type === group)
+  const selectedGroup = active ? group : 'all'
   const trends = active
     ? detail.trend_data.filter((item) => active.metric_types.includes(item.metric_type))
     : detail.trend_data
@@ -45,12 +46,13 @@ export function DetailView({ detail }: { detail: Detail }) {
         <div className="mw-detail-metrics">
           <div className="mw-groups" data-label={t('detail.metricGroup')}>
             <div className="mw-range">
-              <button aria-pressed={group === 'all'} onClick={() => setGroup('all')}>
+              <button type="button" aria-pressed={selectedGroup === 'all'} onClick={() => setGroup('all')}>
                 {t('detail.allGroups')}
               </button>
               {detail.metric_groups.map((item) => (
                 <button
-                  aria-pressed={group === item.group_type}
+                  type="button"
+                  aria-pressed={selectedGroup === item.group_type}
                   key={item.group_type}
                   onClick={() => setGroup(item.group_type)}
                 >
@@ -59,7 +61,7 @@ export function DetailView({ detail }: { detail: Detail }) {
               ))}
             </div>
           </div>
-          <Stats key={group} stats={stats} className="mw-detail-stats" />
+          <Stats key={selectedGroup} stats={stats} className="mw-detail-stats" />
         </div>
       </div>
 

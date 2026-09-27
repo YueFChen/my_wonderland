@@ -5,10 +5,10 @@ use std::sync::{Arc, RwLock};
 
 use base64::Engine as _;
 use serde_json::{Value, json};
+use wonderland_my_wonderland::{AccountProvider, MyWonderland, Scope};
 use wonderland_plugin_sdk::{
     AccountSnapshot, AccountStatus, HostClient, PluginError, PluginFailure, serve,
 };
-use wonderland_my_wonderland::{AccountProvider, MyWonderland, Scope};
 
 const CONTRACT: &str = include_str!("../package/contract.json");
 
@@ -28,18 +28,31 @@ fn run() -> Result<(), String> {
         .map(PathBuf::from)
         .ok_or_else(|| "Core did not provide a plugin data directory".to_owned())?;
     let account = Arc::new(HostAccountService::new());
-    let plugin = Arc::new(MyWonderland::new(data_dir.join("series-v2"), account.clone())
-        .map_err(|error| error.to_string())?);
-    let runtime = Arc::new(tokio::runtime::Builder::new_multi_thread().worker_threads(2).enable_all().build()
-        .map_err(|error| error.to_string())?);
+    let plugin = Arc::new(
+        MyWonderland::new(data_dir.join("series-v2"), account.clone())
+            .map_err(|error| error.to_string())?,
+    );
+    let runtime = Arc::new(
+        tokio::runtime::Builder::new_multi_thread()
+            .worker_threads(2)
+            .enable_all()
+            .build()
+            .map_err(|error| error.to_string())?,
+    );
 
-    serve("my_wonderland", "0.1.0", CONTRACT, move |host, method, params, _request_id| {
-        let result = dispatch(&host, &account, &plugin, &runtime, &method, params);
-        result.map_err(|error| {
-            let code = format!("PLUGIN_MY_WONDERLAND_{}", error.code().to_ascii_uppercase());
-            PluginError::new(code, error.to_string())
-        })
-    }).map_err(|error| error.to_string())
+    serve(
+        "my_wonderland",
+        env!("CARGO_PKG_VERSION"),
+        CONTRACT,
+        move |host, method, params, _request_id| {
+            let result = dispatch(&host, &account, &plugin, &runtime, &method, params);
+            result.map_err(|error| {
+                let code = format!("PLUGIN_MY_WONDERLAND_{}", error.code().to_ascii_uppercase());
+                PluginError::new(code, error.to_string())
+            })
+        },
+    )
+    .map_err(|error| error.to_string())
 }
 
 fn dispatch(
@@ -70,9 +83,17 @@ fn dispatch(
     }
 }
 
-fn value_param<T: serde::de::DeserializeOwned>(params: &Value, key: &str) -> Result<T, PluginFailure> {
-    serde_json::from_value(params.get(key).cloned().ok_or(PluginFailure::InvalidInput)?)
-        .map_err(|_| PluginFailure::InvalidInput)
+fn value_param<T: serde::de::DeserializeOwned>(
+    params: &Value,
+    key: &str,
+) -> Result<T, PluginFailure> {
+    serde_json::from_value(
+        params
+            .get(key)
+            .cloned()
+            .ok_or(PluginFailure::InvalidInput)?,
+    )
+    .map_err(|_| PluginFailure::InvalidInput)
 }
 
 struct HostAccountService {
@@ -82,20 +103,31 @@ struct HostAccountService {
 
 impl HostAccountService {
     fn new() -> Self {
-        Self { snapshot: RwLock::new(AccountSnapshot {
-            status: AccountStatus::LoggedOut,
-            current_account_key: None,
-            accounts: Vec::new(),
-            last_login_failure: None,
-        }), host: RwLock::new(None) }
+        Self {
+            snapshot: RwLock::new(AccountSnapshot {
+                status: AccountStatus::LoggedOut,
+                current_account_key: None,
+                accounts: Vec::new(),
+                last_login_failure: None,
+            }),
+            host: RwLock::new(None),
+        }
     }
 
     fn refresh(&self, host: &HostClient) -> Result<(), PluginFailure> {
-        *self.host.write().map_err(|_| PluginFailure::NotInitialized)? = Some(host.clone());
-        let value = host.call_core("core.account.snapshot", json!({}))
+        *self
+            .host
+            .write()
+            .map_err(|_| PluginFailure::NotInitialized)? = Some(host.clone());
+        let value = host
+            .call_core("core.account.snapshot", json!({}))
             .map_err(host_error)?;
-        let snapshot: AccountSnapshot = serde_json::from_value(value).map_err(|_| PluginFailure::InvalidResponse)?;
-        *self.snapshot.write().map_err(|_| PluginFailure::NotInitialized)? = snapshot;
+        let snapshot: AccountSnapshot =
+            serde_json::from_value(value).map_err(|_| PluginFailure::InvalidResponse)?;
+        *self
+            .snapshot
+            .write()
+            .map_err(|_| PluginFailure::NotInitialized)? = snapshot;
         Ok(())
     }
 }
@@ -112,22 +144,32 @@ impl AccountProvider for HostAccountService {
         let host = self.host.read().ok().and_then(|host| host.clone());
         Box::pin(async move {
             let host = host.ok_or(PluginFailure::NotInitialized)?;
-            let response = host.call_core("core.account.authed_get", json!({
-                "accountKey": account_key,
-                "path": path,
-                "query": query,
-            })).map_err(host_error)?;
-            let encoded = response.get("contentBase64").and_then(Value::as_str)
+            let response = host
+                .call_core(
+                    "core.account.authed_get",
+                    json!({
+                        "accountKey": account_key,
+                        "path": path,
+                        "query": query,
+                    }),
+                )
+                .map_err(host_error)?;
+            let encoded = response
+                .get("contentBase64")
+                .and_then(Value::as_str)
                 .ok_or(PluginFailure::InvalidResponse)?;
-            base64::engine::general_purpose::STANDARD.decode(encoded)
+            base64::engine::general_purpose::STANDARD
+                .decode(encoded)
                 .map_err(|_| PluginFailure::InvalidResponse)
         })
     }
 
     fn snapshot(&self) -> AccountSnapshot {
-        self.snapshot.read().map(|snapshot| snapshot.clone()).unwrap_or_else(|poisoned| poisoned.into_inner().clone())
+        self.snapshot
+            .read()
+            .map(|snapshot| snapshot.clone())
+            .unwrap_or_else(|poisoned| poisoned.into_inner().clone())
     }
-
 }
 
 fn host_error(error: PluginError) -> PluginFailure {

@@ -15,7 +15,7 @@ jobs:
       - name: Checkout the pinned Core SDK source
         shell: pwsh
         env:
-          CORE_REF: f5c6687025e64e5a5f843b7a76c8494f23132afb
+          CORE_REF: 4efa887de574b1d12409f4021399a44f2a65b491
         run: |
           git clone --filter=blob:none --no-checkout https://github.com/YueFChen/Wonderland_Assistant.git core
           git -C core fetch --depth=1 origin $env:CORE_REF
@@ -42,8 +42,20 @@ jobs:
         run: pnpm install --frozen-lockfile
         working-directory: core/plugins/my_wonderland
 
-      - name: Typecheck plugin UI
-        run: pnpm typecheck
+      - name: Check plugin UI (typecheck / tests / build)
+        run: pnpm run check
+        working-directory: core/plugins/my_wonderland
+
+      - name: Check Rust formatting
+        run: rustfmt --edition 2024 --check src/lib.rs src/main.rs
+        working-directory: core/plugins/my_wonderland
+
+      - name: Run Rust clippy
+        run: cargo clippy --all-targets --all-features --locked -- -D warnings
+        working-directory: core/plugins/my_wonderland
+
+      - name: Run Rust tests
+        run: cargo test --locked
         working-directory: core/plugins/my_wonderland
 
       - name: Build release package

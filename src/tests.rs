@@ -8,8 +8,7 @@ use std::{
     },
 };
 use wonderland_plugin_sdk::{
-    AccountSnapshot, AccountStatus, AccountSummary, GameRoleSummary,
-    PluginFailure,
+    AccountSnapshot, AccountStatus, AccountSummary, GameRoleSummary, PluginFailure,
 };
 fn fixture(name: &str) -> serde_json::Value {
     let source = match name {
@@ -32,6 +31,7 @@ fn scope() -> Scope {
 }
 struct Fake {
     fail: AtomicBool,
+    fail_detail: StdMutex<Option<String>>,
     calls: StdMutex<Vec<String>>,
 }
 impl AccountProvider for Fake {
@@ -72,6 +72,14 @@ impl AccountProvider for Fake {
                     fixture("page1")
                 }
             } else {
+                let stage_id = query
+                    .iter()
+                    .find(|(key, _)| key == "stage_id")
+                    .map(|(_, value)| value.clone())
+                    .unwrap();
+                if self.fail_detail.lock().unwrap().as_ref() == Some(&stage_id) {
+                    return Err(PluginFailure::Timeout);
+                }
                 fixture("detail")
             };
             if path.ends_with("get_stage_detail") {
@@ -98,6 +106,7 @@ fn setup() -> (MyWonderland, Arc<Fake>, PathBuf) {
     ));
     let fake = Arc::new(Fake {
         fail: AtomicBool::new(false),
+        fail_detail: StdMutex::new(None),
         calls: StdMutex::new(vec![]),
     });
     let p = MyWonderland::new(temp.clone(), fake.clone()).unwrap();
@@ -213,6 +222,14 @@ async fn collect_merges_into_one_deduped_series() {
     assert_eq!(first.fetch_count, 1);
     assert_eq!(first.stages.len(), 9);
     assert_eq!(first.details.len(), 9);
+    assert_eq!(
+        first
+            .stages
+            .iter()
+            .map(|stage| stage.base_info.stage_id.clone())
+            .collect::<Vec<_>>(),
+        (1000..1009).map(|id| id.to_string()).collect::<Vec<_>>()
+    );
     assert!(point_count(&first) > 0);
 
     // 第二次采集拿到同一个滚动窗口：点位按日期去重，不产生重复。
@@ -224,6 +241,22 @@ async fn collect_merges_into_one_deduped_series() {
     let stored = p.series(&scope()).unwrap().unwrap();
     assert_eq!(stored.fetch_count, 2);
     assert_eq!(stored.details.len(), 9);
+    fs::remove_dir_all(temp).unwrap();
+}
+#[tokio::test]
+async fn detail_failure_keeps_successful_collection_data() {
+    let (plugin, fake, temp) = setup();
+    *fake.fail_detail.lock().unwrap() = Some("1002".into());
+
+    let error = plugin.collect(scope()).await.unwrap_err();
+    assert!(matches!(error, PluginFailure::Other(_)));
+
+    let stored = plugin.series(&scope()).unwrap().unwrap();
+    assert_eq!(stored.stages.len(), 9);
+    assert_eq!(stored.details.len(), 8);
+    assert!(!stored.details.contains_key("1002"));
+    assert!(stored.details.contains_key("1008"));
+    assert!(point_count(&stored) > 0);
     fs::remove_dir_all(temp).unwrap();
 }
 #[tokio::test]
@@ -302,6 +335,40 @@ fn merge_dedups_points_and_keeps_works_and_metrics() {
     assert_eq!(series.details.len(), 2);
     assert_eq!(series.details["100002"].trend_data[0].daily_stats.len(), 1);
     assert_eq!(series.details["100001"].trend_data[0].daily_stats.len(), 2);
+}
+#[test]
+fn merge_keeps_api_order_and_appends_archived_works() {
+    let mut series = Series::empty(scope());
+    series.merge(
+        1_000,
+        overview_of(vec![]),
+        vec![
+            stage_of("old-a", "GAME_LIST_STATUS_OFFLINE"),
+            stage_of("old-b", "GAME_LIST_STATUS_OFFLINE"),
+            stage_of("archived", "GAME_LIST_STATUS_DELETED"),
+        ],
+        BTreeMap::new(),
+    );
+
+    series.merge(
+        2_000,
+        overview_of(vec![]),
+        vec![
+            stage_of("new", "GAME_LIST_STATUS_ONLINE"),
+            stage_of("old-b", "GAME_LIST_STATUS_ONLINE"),
+            stage_of("old-a", "GAME_LIST_STATUS_ONLINE"),
+        ],
+        BTreeMap::new(),
+    );
+
+    assert_eq!(
+        series
+            .stages
+            .iter()
+            .map(|stage| stage.base_info.stage_id.as_str())
+            .collect::<Vec<_>>(),
+        ["new", "old-b", "old-a", "archived"]
+    );
 }
 #[test]
 fn merge_preserves_invalid_points_and_latest_corrections() {

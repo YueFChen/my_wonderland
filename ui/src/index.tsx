@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
-import type { Scope, Series, Stage } from './types.generated'
+import type { Scope, Series } from './types.generated'
 import type { AccountSnapshot } from '@wonderland/plugin-ui-sdk'
 
 import { Trends } from './Charts'
@@ -7,7 +7,7 @@ import { DetailView } from './DetailView'
 import { WorksGrid } from './WorksView'
 import { errorMessage, formatTime } from './display'
 import { t, type MessageKey } from './i18n'
-import { numeric } from './metrics'
+import { summarizeStages } from './summary'
 import { needsCollect } from './refresh'
 import './style.css'
 
@@ -51,17 +51,8 @@ const FILTERS: { value: Filter; labelKey: MessageKey; emptyKey: MessageKey; stat
   },
 ]
 
-const HOT = 'METRIC_STAGE_TYPE_STAGE_HOT_SCORE'
-const RATE = 'METRIC_STAGE_TYPE_GOOD_RATE'
-const ONLINE = 'GAME_LIST_STATUS_ONLINE'
-
 const scopeKey = (scope: Scope) => `${scope.account_key}/${scope.region}/${scope.uid}`
 const emptyScope: Scope = { account_key: '', uid: '', region: '' }
-
-const stageMetric = (stage: Stage, metric: string): number | null => {
-  const stat = stage.today_stats.find((item) => item.metric_type === metric)
-  return stat ? numeric(stat.cur, stat.value_type, stat.metric_type) : null
-}
 
 export function MyWonderlandPage({ api, snapshot }: Props) {
   const [series, setSeries] = useState<Series | null>(null)
@@ -100,8 +91,8 @@ export function MyWonderlandPage({ api, snapshot }: Props) {
   }, [snapshot])
 
   const current = scopes.find((item) => item.scope.account_key === snapshot?.current_account_key)
-  const key = selected || scopeKey(current?.scope ?? scopes[0]?.scope ?? emptyScope)
-  const chosen = scopes.find((item) => scopeKey(item.scope) === key)
+  const chosen = scopes.find((item) => scopeKey(item.scope) === selected) ?? current ?? scopes[0]
+  const key = scopeKey(chosen?.scope ?? emptyScope)
   const scope = chosen?.scope
 
   useEffect(() => {
@@ -130,7 +121,17 @@ export function MyWonderlandPage({ api, snapshot }: Props) {
         setSeries(fresh)
         setError('')
       } catch (cause) {
-        if (generation.current === id && mounted.current) setError(errorMessage(cause))
+        if (generation.current === id && mounted.current) {
+          setError(errorMessage(cause))
+          // Detail failures are reported after the successful parts were saved.
+          // Reload that partial result so a first collection still shows its data.
+          try {
+            const saved = await api.series(scope)
+            if (generation.current === id && mounted.current && saved) setSeries(saved)
+          } catch {
+            // Keep the original collection error visible.
+          }
+        }
       } finally {
         if (generation.current === id && mounted.current) {
           setLoading(false)
@@ -145,29 +146,41 @@ export function MyWonderlandPage({ api, snapshot }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [api, key])
 
+  const refresh = () => {
+    if (!scope || busy || loading) return
+    const refreshScope = scope
+    const id = ++generation.current
+    setError('')
+    setBusy(true)
+    void (async () => {
+      try {
+        const fresh = await api.collect(refreshScope)
+        if (generation.current !== id || !mounted.current) return
+        setSeries(fresh)
+      } catch (cause) {
+        if (generation.current !== id || !mounted.current) return
+        setError(errorMessage(cause))
+        // collect may report a partial result after persisting it locally.
+        try {
+          const saved = await api.series(refreshScope)
+          if (generation.current === id && mounted.current && saved) setSeries(saved)
+        } catch {
+          // Keep the previous in-memory data and the collection error.
+        }
+      } finally {
+        if (generation.current === id && mounted.current) setBusy(false)
+      }
+    })()
+  }
+
   const active = FILTERS.find((item) => item.value === filter) ?? FILTERS[0]
   const stages = useMemo(() => {
     const list = series?.stages ?? []
     return active.status ? list.filter((stage) => stage.base_info.game_list_status === active.status) : list
   }, [series, active.status])
 
-  // 概览统计：总关卡数 / 在线关卡 / 总热度 / 平均好评率。
-  const summary = useMemo(() => {
-    const list = series?.stages ?? []
-    let hot = 0
-    const rates: number[] = []
-    for (const stage of list) {
-      hot += stageMetric(stage, HOT) ?? 0
-      const rate = stageMetric(stage, RATE)
-      if (rate !== null && rate > 0) rates.push(rate)
-    }
-    return {
-      total: list.length,
-      online: list.filter((stage) => stage.base_info.game_list_status === ONLINE).length,
-      hot,
-      rate: rates.length ? rates.reduce((sum, value) => sum + value, 0) / rates.length : null,
-    }
-  }, [series])
+  // 概览只汇总有效值；有效的 0 参与计算，无效值不按 0 处理。
+  const summary = useMemo(() => summarizeStages(series?.stages ?? []), [series])
 
   const detail = stageId ? series?.details[stageId] : undefined
 
@@ -183,7 +196,7 @@ export function MyWonderlandPage({ api, snapshot }: Props) {
     <section className="mw" aria-label={t('works.title')}>
       <div className="mw-toolbar">
         {detail && (
-          <button className="mw-back" onClick={() => {
+          <button type="button" className="mw-back" onClick={() => {
             restoreListScroll.current = true
             setStageId(null)
           }}>
@@ -191,34 +204,50 @@ export function MyWonderlandPage({ api, snapshot }: Props) {
           </button>
         )}
         <div className="mw-toolbar-end">
+          <button
+            type="button"
+            className="mw-refresh"
+            disabled={busy || loading || !scope}
+            onClick={refresh}
+          >
+            {t(error ? 'works.retry' : 'works.refresh')}
+          </button>
           <label className="mw-role-picker">
             <span>{t('works.account')}</span>
             <select
               aria-label={t('works.account')}
               value={key}
+              disabled={!snapshot || busy || scopes.length === 0}
               onChange={(event) => {
                 generation.current++
                 setSelected(event.target.value)
               }}
             >
-              {scopes.map((item) => (
-                <option key={scopeKey(item.scope)} value={scopeKey(item.scope)}>
-                  {item.label}
-                </option>
-              ))}
+              {scopes.length === 0 ? (
+                <option value={key}>{t(snapshot ? 'works.noRoles' : 'works.loading')}</option>
+              ) : (
+                scopes.map((item) => (
+                  <option key={scopeKey(item.scope)} value={scopeKey(item.scope)}>
+                    {item.label}
+                  </option>
+                ))
+              )}
             </select>
           </label>
           <span className="mw-toolbar-meta">
-            {busy
-              ? t('works.updating')
-              : series
-                ? `${t('works.updatedAt')} · ${formatTime(series.updated_at)}`
-                : t('works.archivePolicy')}
+            {!snapshot
+              ? t('works.loading')
+              : !scope
+                ? t('works.noRoles')
+                : busy
+                  ? t('works.updating')
+                  : series
+                    ? `${t('works.updatedAt')} · ${formatTime(series.updated_at)}`
+                    : t('works.archivePolicy')}
           </span>
         </div>
       </div>
 
-      {!scope && <div className="mw-empty">{t('works.noAccount')}</div>}
       {error && (
         <div className="mw-error" role="alert">
           <span>{error}</span>
@@ -232,7 +261,15 @@ export function MyWonderlandPage({ api, snapshot }: Props) {
         </div>
       )}
 
-      {loading ? (
+      {!snapshot ? (
+        <div className="mw-empty" role="status">
+          {t('works.loading')}
+        </div>
+      ) : !scope ? (
+        <div className="mw-empty" role="status">
+          {t('works.noAccount')}
+        </div>
+      ) : loading ? (
         <div className="mw-empty" role="status">
           {t('works.loading')}
         </div>
@@ -255,7 +292,7 @@ export function MyWonderlandPage({ api, snapshot }: Props) {
             </article>
             <article className="mw-stat">
               <span>{t('works.totalHot')}</span>
-              <strong>{summary.hot.toLocaleString('zh-CN')}</strong>
+              <strong>{summary.hot === null ? '—' : summary.hot.toLocaleString('zh-CN')}</strong>
             </article>
             <article className="mw-stat">
               <span>{t('works.avgRate')}</span>
@@ -271,6 +308,7 @@ export function MyWonderlandPage({ api, snapshot }: Props) {
             <nav className="mw-filters" aria-label={t('works.filterAria')}>
               {FILTERS.map((item) => (
                 <button
+                  type="button"
                   key={item.value}
                   aria-pressed={filter === item.value}
                   onClick={() => setFilter(item.value)}

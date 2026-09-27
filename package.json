@@ -1,6 +1,6 @@
 {
   "name": "wonderland-plugin-my_wonderland",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "packageManager": "pnpm@11.27.0",
   "engines": {
@@ -10,6 +10,8 @@
   "scripts": {
     "build": "node scripts/build-plugin.mjs",
     "build:release": "node scripts/build-release.mjs",
-    "typecheck": "pnpm --dir ui run typecheck"
+    "typecheck": "pnpm --dir ui run typecheck",
+    "test": "pnpm --dir ui run test",
+    "check": "pnpm run typecheck && pnpm run test && pnpm --dir ui run build"
   }
 }

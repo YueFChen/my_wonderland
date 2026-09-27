@@ -1,9 +1,13 @@
 {
   "name": "@wonderland/my-wonderland-ui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
-  "scripts": { "build": "vite build", "typecheck": "tsc --noEmit" },
+  "scripts": {
+    "build": "vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test"
+  },
   "dependencies": {
     "@wonderland/plugin-ui-sdk": "link:../../../packages/plugin-ui-sdk",
     "@wonderland/ui": "link:../../../packages/ui",

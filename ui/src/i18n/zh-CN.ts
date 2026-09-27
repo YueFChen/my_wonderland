@@ -2,29 +2,32 @@
  * 插件界面文案资源表。
  *
  * 键 = `<域>.<语义>`，点分、段内 camelCase；域取页面 / 视图名：
- * `works`（作品列表页）、`detail`（作品详情）、`stats`（指标与时长分布）、
+ * `works`（关卡列表页）、`detail`（关卡详情）、`stats`（指标与时长分布）、
  * `chart`（趋势图）、`common`（跨视图复用）、`metric`（数值单位）。
  * 官方指标代号 → 显示名的映射见 `metric.ts`。
  *
  * 带参数的条目用 `{name}` 占位符，调用处传 `t(key, { name })`。
  */
 export const zh = {
-  /** 作品列表页（index.tsx / WorksView.tsx）。 */
+  /** 关卡列表页（index.tsx / WorksView.tsx）。 */
   'works.title': '我的奇域',
   'works.loading': '正在读取本地数据…',
-  'works.emptyLocal': '暂无本地数据，正在从官方获取…',
-  'works.empty': '该角色暂无作品。',
-  'works.emptyOnline': '暂无在线作品。',
-  'works.emptyOffline': '暂无离线作品。',
-  'works.emptyDeleted': '暂无已删除作品。',
+  'works.emptyLocal': '暂无本地关卡数据。',
+  'works.empty': '该角色暂无关卡。',
+  'works.emptyOnline': '暂无在线关卡。',
+  'works.emptyOffline': '暂无离线关卡。',
+  'works.emptyDeleted': '暂无已删除关卡。',
   'works.noAccount': '请先在账号页登录并同步角色。',
+  'works.noRoles': '暂无可选角色',
   'works.account': '账号 / 角色',
-  'works.listHeading': '作品列表',
+  'works.listHeading': '关卡列表',
   'works.updatedAt': '数据更新于',
   'works.updating': '正在更新…',
-  'works.collecting': '正在采集总览、作品与详情…',
-  /** 作品状态筛选。 */
-  'works.filterAria': '作品状态筛选',
+  'works.refresh': '刷新数据',
+  'works.retry': '重试采集',
+  'works.collecting': '正在采集总览、关卡与详情…',
+  /** 关卡状态筛选。 */
+  'works.filterAria': '关卡状态筛选',
   'works.filterAll': '全部',
   'works.filterOnline': '在线',
   'works.filterOffline': '离线',
@@ -32,24 +35,24 @@ export const zh = {
   'works.totalStages': '总关卡数',
   'works.onlineStages': '在线关卡',
   'works.totalHot': '总热度',
-  'works.avgRate': '平均好评率',
-  'works.back': '返回作品列表',
+  'works.avgRate': '平均推荐率',
+  'works.back': '返回关卡列表',
   'works.viewDetail': '查看详情',
-  'works.stageId': '关卡ID',
+  'works.stageId': '关卡 ID',
   'works.hotScore': '热度',
-  'works.goodRate': '好评率',
+  'works.goodRate': '推荐率',
   'works.avgTime': '平均时长',
   /** 官方只给滚动窗口，本地按日期去重后长期留存。 */
   'works.archivePolicy': '数据按日期去重后留存于本机，官方窗口之外的历史仍可查看。',
-  'works.partial': '自动抓取失败不会影响已有数据；下次进入页面会重试。',
+  'works.partial': '单条详情失败不会丢弃已获取的数据；完成后可手动重试。',
   'works.previous': '上一页',
   'works.next': '下一页',
 
-  /** 作品详情（DetailView.tsx）。 */
+  /** 关卡详情（DetailView.tsx）。 */
   'detail.latestOnline': '最近上线',
   'detail.metricGroup': '指标分组',
   'detail.allGroups': '全部指标',
-  'detail.comments': '作品评价',
+  'detail.comments': '关卡评价',
   'detail.commentsHint': '展示统计接口返回的评价样本。',
   'detail.recommend': '推荐',
   'detail.notRecommend': '不推荐',
@@ -86,7 +89,7 @@ export const zh = {
   'chart.pointsCount': '次数',
 
   /** 跨视图复用。 */
-  'common.worksUnit': '{count} 个作品',
+  'common.worksUnit': '{count} 个关卡',
   'common.statusOnline': '已上线',
   'common.statusOffline': '已下线',
   'common.statusDeleted': '已删除',

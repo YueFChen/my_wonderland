@@ -1,5 +1,5 @@
 use serde::{Deserialize, Serialize};
-use std::collections::BTreeMap;
+use std::collections::{BTreeMap, BTreeSet};
 
 /// 本地序列的 schema 版本。旧版逐次快照是 v1，两者目录并存但互不读取。
 pub const SERIES_VERSION: u32 = 2;
@@ -181,16 +181,32 @@ impl Series {
         self.overview.today_str = overview.today_str;
         self.overview.today_stats = overview.today_stats;
         merge_trends(&mut self.overview.trend_data, &overview.trend_data);
+        // The API returns stages in its selected sort order. Keep that order for
+        // the current response, then retain previously archived stages it omitted.
+        let previous_order: Vec<String> = self
+            .stages
+            .iter()
+            .map(|stage| stage.base_info.stage_id.clone())
+            .collect();
+        let mut previous: BTreeMap<String, Stage> = std::mem::take(&mut self.stages)
+            .into_iter()
+            .map(|stage| (stage.base_info.stage_id.clone(), stage))
+            .collect();
+        let mut seen = BTreeSet::new();
+        let mut merged = Vec::with_capacity(stages.len() + previous.len());
         for stage in stages {
-            match self
-                .stages
-                .iter_mut()
-                .find(|s| s.base_info.stage_id == stage.base_info.stage_id)
-            {
-                Some(slot) => *slot = stage,
-                None => self.stages.push(stage),
+            let id = stage.base_info.stage_id.clone();
+            if seen.insert(id.clone()) {
+                previous.remove(&id);
+                merged.push(stage);
             }
         }
+        for id in previous_order {
+            if let Some(stage) = previous.remove(&id) {
+                merged.push(stage);
+            }
+        }
+        self.stages = merged;
         for (id, incoming) in details {
             match self.details.get_mut(&id) {
                 Some(slot) => {
@@ -248,24 +264,25 @@ fn merge_points(target: &mut Vec<DailyStat>, incoming: &[DailyStat]) {
 /// 用合并后的序列重算 7/30 日变化；点数不够时留空（界面显示 —，不按 0 计算）。
 fn finalize(trend: &mut Trend) {
     trend.daily_stats.sort_by(|a, b| a.date.cmp(&b.date));
-    trend.delta_7_day = change(&trend.daily_stats, 7);
-    trend.delta_30_day = change(&trend.daily_stats, 30);
-    trend.delta_7_day_invalid = false;
-    trend.delta_30_day_invalid = false;
+    (trend.delta_7_day, trend.delta_7_day_invalid) = change(&trend.daily_stats, 7);
+    (trend.delta_30_day, trend.delta_30_day_invalid) = change(&trend.daily_stats, 30);
 }
 
-fn change(points: &[DailyStat], days: usize) -> String {
+fn change(points: &[DailyStat], days: usize) -> (String, bool) {
     let last = points.len().checked_sub(1);
     let previous = last.and_then(|index| index.checked_sub(days));
     let (Some(last), Some(previous)) = (last, previous) else {
-        return String::new();
+        return (String::new(), false);
     };
+    if points[last].cur_invalid || points[previous].cur_invalid {
+        return (String::new(), true);
+    }
     match (
         points[last].cur.parse::<f64>(),
         points[previous].cur.parse::<f64>(),
     ) {
-        (Ok(cur), Ok(previous)) => number(cur - previous),
-        _ => String::new(),
+        (Ok(cur), Ok(previous)) => (number(cur - previous), false),
+        _ => (String::new(), false),
     }
 }
 
@@ -274,6 +291,58 @@ fn number(value: f64) -> String {
         format!("{}", value as i64)
     } else {
         format!("{value}")
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::{DailyStat, Trend, finalize};
+
+    fn points(count: usize) -> Vec<DailyStat> {
+        (0..count)
+            .map(|day| DailyStat {
+                date: format!("2026-01-{:02}", day + 1),
+                cur: (100 + day).to_string(),
+                delta: String::new(),
+                value_type: "METRIC_VALUE_TYPE_NUMBER".into(),
+                cur_invalid: false,
+            })
+            .collect()
+    }
+
+    #[test]
+    fn finalize_marks_invalid_comparison_endpoints() {
+        let mut seven_day = Trend {
+            daily_stats: points(8),
+            ..Trend::default()
+        };
+        seven_day.daily_stats[0].cur_invalid = true;
+        finalize(&mut seven_day);
+        assert!(seven_day.delta_7_day.is_empty());
+        assert!(seven_day.delta_7_day_invalid);
+
+        let mut thirty_day = Trend {
+            daily_stats: points(31),
+            ..Trend::default()
+        };
+        thirty_day.daily_stats[0].cur_invalid = true;
+        finalize(&mut thirty_day);
+        assert!(thirty_day.delta_30_day.is_empty());
+        assert!(thirty_day.delta_30_day_invalid);
+        assert!(!thirty_day.delta_7_day_invalid);
+    }
+
+    #[test]
+    fn finalize_computes_deltas_for_valid_endpoints() {
+        let mut trend = Trend {
+            daily_stats: points(31),
+            ..Trend::default()
+        };
+        finalize(&mut trend);
+        assert_eq!(trend.delta_7_day, "7");
+        assert_eq!(trend.delta_30_day, "30");
+        assert!(!trend.delta_7_day_invalid);
+        assert!(!trend.delta_30_day_invalid);
     }
 }
 

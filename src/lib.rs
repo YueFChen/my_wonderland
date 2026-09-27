@@ -159,7 +159,10 @@ impl MyWonderland {
         fields(plugin = "my_wonderland", uid = %scope.uid, region = %scope.region)
     )]
     pub async fn collect(&self, scope: Scope) -> Result<Series, PluginFailure> {
-        let _guard = self.collecting.try_lock().map_err(|_| PluginFailure::Busy)?;
+        let _guard = self
+            .collecting
+            .try_lock()
+            .map_err(|_| PluginFailure::Busy)?;
         self.validate_role(&scope)?;
         info!("开始采集奇域数据");
         let overview = self
@@ -195,7 +198,8 @@ impl MyWonderland {
             }
         }
         let mut details = BTreeMap::new();
-        for stage in &stages {
+        let mut detail_failures = 0;
+        for (index, stage) in stages.iter().enumerate() {
             // 官网删除的作品不再提供详情；列表记录仍并入序列，历史点位照旧保留。
             if stage.base_info.game_list_status == "GAME_LIST_STATUS_DELETED" {
                 continue;
@@ -203,18 +207,51 @@ impl MyWonderland {
             tokio::time::sleep(std::time::Duration::from_millis(200)).await;
             let id = &stage.base_info.stage_id;
             debug!(stage_id = %id, "抓取作品详情");
-            let detail = self
+            let detail = match self
                 .fetch::<Detail>(
                     &scope,
                     "get_stage_detail",
                     vec![("stage_id".into(), id.clone())],
                 )
-                .await?;
+                .await
+            {
+                Ok(detail) => detail,
+                Err(error) => {
+                    detail_failures += 1;
+                    warn!(stage_id = %id, error = %error, "作品详情获取失败，继续保存其他采集结果");
+                    // A transient timeout or stage-specific business error can be
+                    // isolated. Shared auth, transport, or response failures apply
+                    // to the remaining requests too, so stop instead of repeating them.
+                    if matches!(
+                        &error,
+                        PluginFailure::SessionExpired
+                            | PluginFailure::Connection
+                            | PluginFailure::Http(_)
+                            | PluginFailure::InvalidResponse
+                            | PluginFailure::InvalidInput
+                            | PluginFailure::NotLoggedIn
+                            | PluginFailure::AccountNotFound(_)
+                            | PluginFailure::Transport(_)
+                            | PluginFailure::Other(_)
+                    ) {
+                        detail_failures += stages[index + 1..]
+                            .iter()
+                            .filter(|remaining| {
+                                remaining.base_info.game_list_status != "GAME_LIST_STATUS_DELETED"
+                            })
+                            .count();
+                        break;
+                    }
+                    continue;
+                }
+            };
             if detail.stage_info.stage_id != *id
                 || detail.stage_info.uid != scope.uid
                 || detail.stage_info.region != scope.region
             {
-                return Err(PluginFailure::InvalidResponse);
+                detail_failures += 1;
+                warn!(stage_id = %id, "作品详情身份与请求不匹配，跳过该详情");
+                continue;
             }
             details.insert(id.clone(), detail);
         }
@@ -228,7 +265,15 @@ impl MyWonderland {
             .unwrap_or_else(|| Series::empty(scope.clone()));
         series.merge(now.as_secs(), overview, stages, details);
         self.save(&series)?;
-        info!(stages = series.stages.len(), "采集完成");
+        info!(
+            stages = series.stages.len(),
+            detail_failures, "采集结果已保存"
+        );
+        if detail_failures > 0 {
+            return Err(PluginFailure::Other(format!(
+                "{detail_failures} 项作品详情暂未获取成功，其余数据已保存；可点击“重试”再次采集。"
+            )));
+        }
         Ok(series)
     }
 }

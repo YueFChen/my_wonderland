@@ -34,7 +34,7 @@ export function Trends({ trends, detail = false }: { trends: Trend[]; detail?: b
         <h2>{t('chart.title')}</h2>
         <div className="mw-range">
           {ranges.map(([value, label]) => (
-            <button key={value} aria-pressed={days === value} onClick={() => setDays(value)}>
+            <button type="button" key={value} aria-pressed={days === value} onClick={() => setDays(value)}>
               {label}
             </button>
           ))}

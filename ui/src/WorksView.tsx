@@ -16,7 +16,7 @@ const CARD_METRICS: [string, MessageKey][] = [
 
 interface WorksGridProps {
   stages: Stage[]
-  /** 已抓取详情的作品集合；缺失（如官网已删除）的作品不可进入详情。 */
+  /** 已抓取详情的关卡集合；缺失（如官网已删除）的关卡不可进入详情。 */
   details: Record<string, Detail>
   /** 当前筛选下的空态文案。 */
   empty: string
@@ -29,7 +29,7 @@ function cardValue(stage: Stage, metric: string): string {
   return formatMetric(stat.cur, stat.value_type, stat.metric_type, stat.cur_invalid, stat.calculate_type)
 }
 
-/** 作品卡片网格：封面 + 状态徽章 + 热度/推荐率/平均时长；点开进入详情。 */
+/** 关卡卡片网格：封面、状态与主要指标；打开卡片进入详情。 */
 export function WorksGrid({ stages, details, empty, onOpen }: WorksGridProps) {
   const [page, setPage] = useState(1)
   const pages = Math.max(1, Math.ceil(stages.length / PAGE_SIZE))
@@ -51,7 +51,6 @@ export function WorksGrid({ stages, details, empty, onOpen }: WorksGridProps) {
               key={info.stage_id}
               className="mw-card"
               data-openable={openable}
-              onClick={openable ? () => onOpen(info.stage_id) : undefined}
             >
               <div className="mw-card-cover">
                 <CoverImage src={cover} alt="" loading="lazy" />
@@ -74,19 +73,27 @@ export function WorksGrid({ stages, details, empty, onOpen }: WorksGridProps) {
                   {t('works.stageId')}: {info.stage_id}
                 </div>
               </div>
+              {openable && (
+                <button
+                  type="button"
+                  className="mw-card-action"
+                  aria-label={`${t('works.viewDetail')}：${info.stage_name}`}
+                  onClick={() => onOpen(info.stage_id)}
+                />
+              )}
             </article>
           )
         })}
       </div>
       {pages > 1 && (
         <div className="mw-pagination">
-          <button disabled={current <= 1} onClick={() => setPage(current - 1)}>
+          <button type="button" disabled={current <= 1} onClick={() => setPage(current - 1)}>
             {t('works.previous')}
           </button>
           <span>
             {current} / {pages} · {t('common.worksUnit', { count: stages.length })}
           </span>
-          <button disabled={current >= pages} onClick={() => setPage(current + 1)}>
+          <button type="button" disabled={current >= pages} onClick={() => setPage(current + 1)}>
             {t('works.next')}
           </button>
         </div>

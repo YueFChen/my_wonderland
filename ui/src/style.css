@@ -1,7 +1,7 @@
 /* 我的奇域：插件页面样式。
  *
  * 约定：手写类名，不参与 Tailwind 提取；只覆盖本插件作用域（.mw 前缀）。
- * 结构与风格对齐旧版（列表：统计行 + 状态筛选 + 卡片网格；详情：hero + 指标分组 + 图表 + 评论）。
+ * 结构与风格对齐旧版（关卡列表：统计行 + 状态筛选 + 卡片网格；详情：hero + 指标分组 + 图表 + 评论）。
  */
 
 /* ---------- 基础 ---------- */
@@ -12,9 +12,13 @@
   --mw-gap: 16px;
   --mw-section-gap: 24px;
   --mw-work-card-width: 392px;
+  --mw-card-height: 292px;
   --mw-detail-hero-width: clamp(420px, 28vw, 560px);
   --mw-card-padding: 16px;
-  --mw-control-height: 34px;
+  --mw-control-height: 38px;
+  --mw-control-height-compact: 32px;
+  --mw-control-radius: 8px;
+  --mw-control-padding: 6px 12px;
   min-width: 0;
   padding: 0 var(--app-page-gutter, 24px) var(--mw-section-gap);
   color: var(--app-ink);
@@ -111,8 +115,8 @@
 .mw-role-picker select {
   width: 100%;
   min-width: 0;
-  min-height: 38px;
-  border-radius: 10px;
+  min-height: var(--mw-control-height);
+  border-radius: var(--mw-control-radius);
   transition: border-color 0.15s, background 0.15s;
 }
 .mw-role-picker select:hover {
@@ -127,24 +131,44 @@
 .mw select {
   max-width: 100%;
   min-width: 0;
-  padding: 8px 12px;
+  padding: var(--mw-control-padding);
   border: 1px solid var(--app-field-border);
-  border-radius: 8px;
+  border-radius: var(--mw-control-radius);
   background: var(--app-field);
   color: var(--app-ink);
+}
+.mw-back,
+.mw-refresh,
+.mw-filters button,
+.mw-range button,
+.mw-pagination button,
+.mw-error button {
+  min-height: var(--mw-control-height);
+  padding: var(--mw-control-padding);
+  border-radius: var(--mw-control-radius);
+  font-size: 12px;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 .mw-back {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   margin: 0;
-  padding: 8px 12px;
   border: 1px solid var(--app-glass-line);
-  border-radius: 9px;
   background: var(--app-glass);
   color: var(--app-accent);
 }
 .mw-back:hover {
+  border-color: var(--app-accent-line);
+  background: var(--app-accent-soft);
+}
+.mw-refresh {
+  border: 1px solid var(--app-glass-line);
+  background: transparent;
+  color: var(--app-accent);
+}
+.mw-refresh:hover:not(:disabled) {
   border-color: var(--app-accent-line);
   background: var(--app-accent-soft);
 }
@@ -166,15 +190,9 @@
 .mw-range button,
 .mw-pagination button,
 .mw-error button {
-  min-height: var(--mw-control-height);
-  padding: 6px 12px;
   border: 1px solid var(--app-glass-line);
-  border-radius: 8px;
   background: transparent;
   color: var(--app-ink-muted);
-  font-size: 12px;
-  line-height: 1.2;
-  white-space: nowrap;
 }
 .mw-filters button:hover,
 .mw-range button:hover,
@@ -256,14 +274,17 @@
 .mw-detail-overview {
   display: grid;
   grid-template-columns: minmax(min(100%, 420px), var(--mw-detail-hero-width)) minmax(0, 1fr);
-  min-height: 292px;
+  /* Match the work-card height; extra metrics scroll inside their own pane. */
+  height: var(--mw-card-height);
+  min-height: var(--mw-card-height);
   align-items: stretch;
   gap: var(--mw-gap);
 }
 .mw-detail-metrics {
   display: grid;
   min-width: 0;
-  grid-template-rows: auto 1fr;
+  min-height: 0;
+  grid-template-rows: auto minmax(0, 1fr);
   gap: 8px;
   padding: 12px;
   border: 1px dashed var(--app-glass-line-strong);
@@ -282,9 +303,12 @@
   flex-wrap: wrap;
 }
 .mw-detail-stats {
+  min-height: 0;
+  overflow-y: auto;
   align-content: start;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-auto-rows: minmax(104px, 1fr);
+  scrollbar-width: thin;
 }
 .mw-detail-stats .mw-stat {
   min-height: 104px;
@@ -346,17 +370,18 @@
   color: var(--app-danger);
 }
 
-/* ---------- 作品卡片网格 ---------- */
+/* ---------- 关卡卡片网格 ---------- */
 .mw-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
   gap: var(--mw-gap);
 }
 .mw-card {
+  position: relative;
   display: flex;
   flex-direction: column;
-  height: 292px;
-  min-height: 292px;
+  height: var(--mw-card-height);
+  min-height: var(--mw-card-height);
   overflow: hidden;
   border: 1px solid var(--app-glass-line);
   border-radius: 14px;
@@ -372,6 +397,24 @@
   border-color: var(--app-glass-line-strong);
   background: var(--app-glass-hover);
   box-shadow: 0 10px 26px rgb(20 16 46 / 10%);
+}
+.mw-card-action {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
+}
+.mw-card-action:focus-visible {
+  outline: 2px solid var(--app-accent);
+  outline-offset: -5px;
 }
 .mw-card-cover {
   position: relative;
@@ -633,12 +676,13 @@
 }
 .mw-data-trigger {
   display: inline-flex;
+  min-height: var(--mw-control-height-compact);
   align-items: center;
   margin-top: auto;
   align-self: flex-start;
   padding: 5px 8px;
   border: 1px solid transparent;
-  border-radius: 7px;
+  border-radius: var(--mw-control-radius);
   background: transparent;
   color: var(--app-ink-faint);
   font-size: 11px;
@@ -691,12 +735,12 @@
 }
 .mw-data-dialog-close {
   display: grid;
-  width: 32px;
-  height: 32px;
+  width: var(--mw-control-height-compact);
+  height: var(--mw-control-height-compact);
   flex: 0 0 auto;
   place-items: center;
   border: 1px solid var(--app-glass-line);
-  border-radius: 8px;
+  border-radius: var(--mw-control-radius);
   background: transparent;
   color: var(--app-ink-muted);
   font-size: 20px;
@@ -755,7 +799,9 @@
 }
 .mw-distribution select {
   min-width: 0;
+  min-height: var(--mw-control-height-compact);
   padding: 5px 8px;
+  border-radius: var(--mw-control-radius);
   font-size: 11px;
 }
 .mw-legend {
@@ -968,6 +1014,7 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .mw-detail-overview {
+    height: auto;
     grid-template-columns: 1fr;
     grid-template-rows: 240px auto;
   }
