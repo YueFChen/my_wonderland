@@ -7,6 +7,9 @@ import type { WonderlandApi } from './index'
 import type { Scope, Series } from './types.generated'
 import './host.css'
 
+// Presentation hint only; Core enforces remote authorization independently.
+document.documentElement.dataset.wonderlandRemote = String(new URLSearchParams(location.search).get('wonderlandClient') === 'web')
+
 const host = createPluginHostClient('my_wonderland')
 
 const api: WonderlandApi = {

@@ -65,3 +65,7 @@ Core 按插件版本管理安装目录。同一版本已经安装时，先在插
 - `src/main.rs`：协议后端及 Core 账号服务适配。
 
 日常开发先改 contract 与对应适配，再同步更新前端 DTO。插件包由仓库根目录的 `scripts/build-plugin.mjs` 生成；debug 包不包含发布签名。
+
+## Core 0.1.8 与远程访问
+
+见 [CORE-COMPATIBILITY.md](CORE-COMPATIBILITY.md)，包括最低版本、远程声明和发布顺序。

@@ -1101,3 +1101,9 @@
     transition: none;
   }
 }
+
+/* Charts retain internal horizontal scrolling on remote phones. */
+@media (max-width: 560px) {
+  html[data-wonderland-remote='true'] .mw { padding-inline: 12px; }
+  html[data-wonderland-remote='true'] .mw button { min-height: 36px; }
+}

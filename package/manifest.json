@@ -2,11 +2,11 @@
   "manifestVersion": 2,
   "id": "my_wonderland",
   "name": "我的奇域",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "查询并归档奇域作品数据。",
   "icon": "database",
   "hostCompatibility": {
-    "minCoreVersion": "0.1.0",
+    "minCoreVersion": "0.1.8",
     "maxCoreVersionExclusive": "1.0.0",
     "protocol": { "minVersion": "1.0.0", "maxVersionExclusive": "2.0.0" }
   },
@@ -20,6 +20,7 @@
     ]
   },
   "backend": { "entry": "backend/wonderland-my-wonderland.exe", "transport": "stdio-ndjson-v1", "supportsServiceContext": true },
+  "remoteAccess": true,
   "contract": "contract.json",
   "capabilities": ["account.read", "account.authed_get"]
 }
