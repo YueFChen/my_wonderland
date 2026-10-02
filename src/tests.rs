@@ -4,7 +4,7 @@ use std::{
     pin::Pin,
     sync::{
         Mutex as StdMutex,
-        atomic::{AtomicBool, Ordering},
+        atomic::{AtomicBool, AtomicU64, Ordering},
     },
 };
 use wonderland_plugin_sdk::{
@@ -95,14 +95,23 @@ impl AccountProvider for Fake {
         })
     }
 }
+static TEST_DIRECTORY_SEQUENCE: AtomicU64 = AtomicU64::new(0);
+
 fn setup() -> (MyWonderland, Arc<Fake>, PathBuf) {
-    let temp = std::env::temp_dir().join(format!(
-        "wonderland-test-{}-{}",
-        std::process::id(),
+    setup_at(
         SystemTime::now()
             .duration_since(UNIX_EPOCH)
             .unwrap()
-            .as_nanos()
+            .as_nanos(),
+    )
+}
+
+fn setup_at(timestamp: u128) -> (MyWonderland, Arc<Fake>, PathBuf) {
+    let temp = std::env::temp_dir().join(format!(
+        "wonderland-test-{}-{}-{}",
+        std::process::id(),
+        timestamp,
+        TEST_DIRECTORY_SEQUENCE.fetch_add(1, Ordering::Relaxed)
     ));
     let fake = Arc::new(Fake {
         fail: AtomicBool::new(false),
@@ -112,6 +121,20 @@ fn setup() -> (MyWonderland, Arc<Fake>, PathBuf) {
     let p = MyWonderland::new(temp.clone(), fake.clone()).unwrap();
     (p, fake, temp)
 }
+#[test]
+fn fixtures_with_identical_clock_ticks_keep_data_and_cleanup_isolated() {
+    let (first, _, first_path) = setup_at(123);
+    let (second, _, second_path) = setup_at(123);
+    assert_ne!(first_path, second_path);
+
+    first.save(&Series::empty(scope())).unwrap();
+    assert!(second.series(&scope()).unwrap().is_none());
+    second.save(&Series::empty(scope())).unwrap();
+    fs::remove_dir_all(first_path).unwrap();
+    assert!(second.series(&scope()).unwrap().is_some());
+    fs::remove_dir_all(second_path).unwrap();
+}
+
 fn trend_sample(metric: &str, points: &[(&str, &str)]) -> Trend {
     Trend {
         metric_type: metric.into(),
