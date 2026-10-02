@@ -19,7 +19,7 @@
       { "id": "main", "kind": "activity", "title": "我的奇域", "icon": "database", "defaultOrder": 300 }
     ]
   },
-  "backend": { "entry": "backend/wonderland-my-wonderland.exe", "transport": "stdio-ndjson-v1" },
+  "backend": { "entry": "backend/wonderland-my-wonderland.exe", "transport": "stdio-ndjson-v1", "supportsServiceContext": true },
   "contract": "contract.json",
   "capabilities": ["account.read", "account.authed_get"]
 }
